@@ -1,0 +1,2097 @@
+<title>Change USDT</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&display=swap">
+<style>
+/* Layout : coque Ikadou — barre latérale sombre fixe groupée par sections, barre haute blanche, surface de travail pâle avec cartes et tableaux bordés */
+:root{
+  --sb-w:248px;
+  --sb-bg:#0c1c27;--sb-head:#071820;--sb-line:#1d2e36;--sb-text:#bfd0d8;--sb-strong:#ffffff;--sb-label:#86979f;--sb-hover:#14293a;--sb-active:#1899a9;--sb-mark:#d95924;--sb-badge:#f25f1f;--sb-logo:#f2f7f6;--sb-logo-ink:#1899a9;--sb-avatar:#113640;--sb-avatar-ink:#5fb7c4;
+  --bg:#f6f8fa;--surface:#ffffff;--surface-2:#f9fbfc;--surface-3:#eff3f5;--line:#dee5e5;--line-2:#ebeff0;
+  --ink:#161a20;--ink-2:#5c6669;--ink-3:#858f94;--ink-4:#aab2b5;
+  --teal:#1899a9;--teal-ink:#175a65;--teal-soft:#def4f8;--teal-soft-2:#c6ebf1;
+  --green:#2aa36a;--green-hover:#23905d;--green-ink:#1b7346;--green-soft:#e2f5eb;
+  --amber:#e0a100;--amber-ink:#875800;--amber-soft:#fdf1d6;
+  --red:#d03b3b;--red-ink:#b3261e;--red-soft:#fce9e7;
+  --orange-ink:#bf4f15;
+  --blue-ink:#195a7d;--blue-soft:#dff2fc;
+  --pill:#edf1f4;--pill-ink:#5a636a;
+  --on-accent:#ffffff;
+  --c-nous:#1899a9;--c-doudou:#eb6834;--c-congo:#6250d6;--c-mali:#d69200;--c-local:#e87ba4;
+  --grid:#e9eef0;--axis:#c5ced2;--hl:rgba(24,153,169,.08);
+  --scrim:rgba(7,24,32,.42);
+  --shadow:0 1px 2px rgba(12,28,39,.05);--shadow-pop:0 1px 2px rgba(12,28,39,.14);--shadow-lg:0 18px 40px rgba(12,28,39,.18);
+  --font:"DM Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:8px;--r-lg:10px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --sb-bg:#08151d;--sb-head:#050f15;--sb-line:#172832;--sb-text:#bfd0d8;--sb-strong:#ffffff;--sb-label:#7d8f97;--sb-hover:#0f2430;--sb-active:#1899a9;--sb-mark:#e0682f;--sb-badge:#f25f1f;--sb-logo:#e8f1f0;--sb-logo-ink:#13808e;--sb-avatar:#123a45;--sb-avatar-ink:#7fcbd6;
+  --bg:#0b161d;--surface:#101e27;--surface-2:#13232e;--surface-3:#182b37;--line:#223641;--line-2:#1a2c37;
+  --ink:#e3ebee;--ink-2:#a6b5bb;--ink-3:#7f9199;--ink-4:#5b6e77;
+  --teal:#22aabb;--teal-ink:#8fd9e4;--teal-soft:#123540;--teal-soft-2:#18464f;
+  --green:#23935e;--green-hover:#2aa36a;--green-ink:#6dd29e;--green-soft:#0f2d21;
+  --amber:#e0a100;--amber-ink:#f0c25e;--amber-soft:#2d2411;
+  --red:#e05a5a;--red-ink:#f39b93;--red-soft:#351a1a;
+  --orange-ink:#f3925c;
+  --blue-ink:#8ccbec;--blue-soft:#10293a;
+  --pill:#1a2d39;--pill-ink:#a7b6bd;
+  --on-accent:#ffffff;
+  --c-nous:#1899a9;--c-doudou:#d95926;--c-congo:#9085e9;--c-mali:#c98500;--c-local:#d55181;
+  --grid:#1a2c37;--axis:#2c414c;--hl:rgba(34,170,187,.10);
+  --scrim:rgba(0,0,0,.6);
+  --shadow:none;--shadow-pop:0 1px 2px rgba(0,0,0,.5);--shadow-lg:0 18px 40px rgba(0,0,0,.55);
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --sb-bg:#08151d;--sb-head:#050f15;--sb-line:#172832;--sb-text:#bfd0d8;--sb-strong:#ffffff;--sb-label:#7d8f97;--sb-hover:#0f2430;--sb-active:#1899a9;--sb-mark:#e0682f;--sb-badge:#f25f1f;--sb-logo:#e8f1f0;--sb-logo-ink:#13808e;--sb-avatar:#123a45;--sb-avatar-ink:#7fcbd6;
+  --bg:#0b161d;--surface:#101e27;--surface-2:#13232e;--surface-3:#182b37;--line:#223641;--line-2:#1a2c37;
+  --ink:#e3ebee;--ink-2:#a6b5bb;--ink-3:#7f9199;--ink-4:#5b6e77;
+  --teal:#22aabb;--teal-ink:#8fd9e4;--teal-soft:#123540;--teal-soft-2:#18464f;
+  --green:#23935e;--green-hover:#2aa36a;--green-ink:#6dd29e;--green-soft:#0f2d21;
+  --amber:#e0a100;--amber-ink:#f0c25e;--amber-soft:#2d2411;
+  --red:#e05a5a;--red-ink:#f39b93;--red-soft:#351a1a;
+  --orange-ink:#f3925c;
+  --blue-ink:#8ccbec;--blue-soft:#10293a;
+  --pill:#1a2d39;--pill-ink:#a7b6bd;
+  --on-accent:#ffffff;
+  --c-nous:#1899a9;--c-doudou:#d95926;--c-congo:#9085e9;--c-mali:#c98500;--c-local:#d55181;
+  --grid:#1a2c37;--axis:#2c414c;--hl:rgba(34,170,187,.10);
+  --scrim:rgba(0,0,0,.6);
+  --shadow:none;--shadow-pop:0 1px 2px rgba(0,0,0,.5);--shadow-lg:0 18px 40px rgba(0,0,0,.55);
+  color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 14px/1.45 var(--font);font-optical-sizing:auto}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{text-wrap:balance}
+.ic{width:18px;height:18px;flex:none}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.num,.tnum{font-variant-numeric:tabular-nums}
+.muted{color:var(--ink-3)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- barre latérale ---------- */
+.sidebar{position:fixed;top:0;bottom:0;left:0;width:calc(var(--sb-w) + env(safe-area-inset-left,0px));padding-left:env(safe-area-inset-left,0px);background:var(--sb-bg);color:var(--sb-text);display:flex;flex-direction:column;z-index:50;border-right:1px solid var(--sb-line);transition:width .18s ease,transform .2s ease}
+.sb-head{flex:none;height:calc(64px + env(safe-area-inset-top,0px));padding:env(safe-area-inset-top,0px) 16px 0;display:flex;align-items:center;gap:11px;background:var(--sb-head);border-bottom:1px solid var(--sb-line)}
+.sb-logo{width:34px;height:34px;border-radius:7px;background:var(--sb-logo);color:var(--sb-logo-ink);display:grid;place-items:center;flex:none}
+.sb-word{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.sb-word b{color:var(--sb-strong);font-size:15.5px;font-weight:600;letter-spacing:.01em}
+.sb-word small{color:var(--sb-label);font-size:11px;font-weight:500;letter-spacing:.06em;white-space:nowrap}
+.sb-nav{flex:1;overflow-y:auto;padding:10px 10px 14px;scrollbar-width:thin}
+.sb-sec{font-size:11px;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--sb-label);padding:18px 12px 7px;white-space:nowrap}
+.nav-item{position:relative;display:flex;align-items:center;gap:12px;min-height:42px;padding:8px 12px;margin:2px 0;border-radius:7px;color:var(--sb-text);text-decoration:none;font-size:15px;font-weight:500}
+.nav-item:hover{background:var(--sb-hover);color:var(--sb-strong)}
+.nav-item.active{background:var(--sb-active);color:var(--sb-strong)}
+.nav-item.active::before{content:"";position:absolute;left:-10px;top:7px;bottom:7px;width:3px;border-radius:0 3px 3px 0;background:var(--sb-mark)}
+.nav-item .ic{width:19px;height:19px}
+.nav-item .lbl{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-badge{min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--sb-badge);color:var(--on-accent);font-size:12px;font-weight:700;display:grid;place-items:center}
+.nav-dot{width:7px;height:7px;border-radius:2px;flex:none}
+.sb-foot{flex:none;border-top:1px solid var(--sb-line);padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px;min-height:72px}
+.avatar{width:38px;height:38px;border-radius:50%;background:var(--sb-avatar);color:var(--sb-avatar-ink);display:grid;place-items:center;font-weight:600;font-size:14px;flex:none;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.sb-user{min-width:0;display:flex;flex-direction:column;line-height:1.25}
+.sb-user b{color:var(--sb-strong);font-weight:500;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sb-user small{color:var(--sb-label);font-size:12.5px}
+.sb-scrim{display:none}
+body.sb-collapsed{--sb-w:76px}
+body.sb-collapsed .sb-word,body.sb-collapsed .nav-item .lbl,body.sb-collapsed .nav-dot,body.sb-collapsed .sb-user{display:none}
+body.sb-collapsed .sb-sec{font-size:0;padding:10px 12px 4px}
+body.sb-collapsed .sb-sec::after{content:"";display:block;height:1px;background:var(--sb-line)}
+body.sb-collapsed .nav-item{justify-content:center;padding:8px}
+body.sb-collapsed .nav-badge{position:absolute;top:2px;right:4px;min-width:18px;height:18px;font-size:11px}
+body.sb-collapsed .sb-head{justify-content:center;padding-inline:0}
+body.sb-collapsed .sb-foot{justify-content:center;padding-inline:0}
+
+/* ---------- zone principale ---------- */
+.main{margin-left:calc(var(--sb-w) + env(safe-area-inset-left,0px));min-width:0;display:flex;flex-direction:column;min-height:100%;transition:margin-left .18s ease}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:45;background:var(--surface)}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;height:64px;background:var(--surface);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding-left:22px;padding-right:max(24px,env(safe-area-inset-right,0px))}
+.tb-title{margin:0;font-size:16.5px;font-weight:600;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-right{display:flex;align-items:center;gap:12px}
+.sync{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-2);white-space:nowrap}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--ink-4)}
+.sync.live i{background:var(--green)}
+.sync.demo i{background:var(--amber)}
+.sync.ro i{background:var(--teal)}
+.content{width:100%;max-width:1480px;padding-block:30px 56px;padding-left:30px;padding-right:max(30px,env(safe-area-inset-right,0px))}
+.content:focus{outline:none}
+.page-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-bottom:22px}
+.page-head h1{margin:0;font-size:27px;font-weight:600;letter-spacing:-.012em;line-height:1.2}
+.page-head p{margin:7px 0 0;color:var(--ink-2);font-size:15px;max-width:76ch}
+.page-head .actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+
+/* ---------- briques ---------- */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);min-width:0}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap;padding:16px 18px 0}
+.card-head h3{margin:0;font-size:15.5px;font-weight:600}
+.card-head .sub{color:var(--ink-3);font-size:13px}
+.card-body{padding:14px 18px 18px}
+.card-foot{padding:12px 18px;border-top:1px solid var(--line-2);color:var(--ink-3);font-size:12.5px}
+.stack{display:flex;flex-direction:column;gap:16px;min-width:0}
+.grid{display:grid;gap:16px;margin-top:16px;align-items:start}
+.g-21{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.g-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:38px;padding:0 15px;border-radius:7px;border:1px solid transparent;font-size:14.5px;font-weight:500;cursor:pointer;white-space:nowrap;text-decoration:none;background:var(--surface);color:var(--ink);transition:background .15s,border-color .15s,color .15s}
+.btn .ic{width:16px;height:16px}
+.btn-primary{background:var(--green);color:var(--on-accent)}
+.btn-primary:hover{background:var(--green-hover)}
+.btn-soft{background:var(--teal-soft);color:var(--teal-ink)}
+.btn-soft:hover{background:var(--teal-soft-2)}
+.btn-line{border-color:var(--line)}
+.btn-line:hover{background:var(--surface-2)}
+.btn-ghost{background:transparent;color:var(--ink-2)}
+.btn-ghost:hover{background:var(--surface-3);color:var(--ink)}
+.btn-danger{background:var(--red);color:var(--on-accent)}
+.btn-danger-ghost{background:transparent;color:var(--red-ink)}
+.btn-danger-ghost:hover{background:var(--red-soft)}
+.btn-sm{height:32px;padding:0 11px;font-size:13.5px}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;border-radius:7px;border:0;background:transparent;color:var(--ink-2);cursor:pointer;flex:none}
+.icon-btn:hover{background:var(--surface-3);color:var(--ink)}
+.pill{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:6px;font-size:13px;font-weight:500;white-space:nowrap;background:var(--pill);color:var(--pill-ink)}
+.pill .ic{width:13px;height:13px}
+.pill-blue{background:var(--blue-soft);color:var(--blue-ink)}
+.pill-green{background:var(--green-soft);color:var(--green-ink)}
+.pill-amber{background:var(--amber-soft);color:var(--amber-ink)}
+.pill-red{background:var(--red-soft);color:var(--red-ink)}
+.pill-teal{background:var(--teal-soft);color:var(--teal-ink)}
+.fbadge{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px 0 9px;border-radius:6px;background:var(--pill);color:var(--ink);font-size:13px;font-weight:500;white-space:nowrap}
+.fbadge i{width:8px;height:8px;border-radius:2px;flex:none}
+.ref{font-size:12.5px;color:var(--ink-3);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.todo{color:var(--orange-ink)}
+.none{color:var(--ink-4);font-style:italic}
+.pos{color:var(--green-ink)}
+.neg{color:var(--red-ink)}
+.callout{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;border-radius:var(--r-lg);background:var(--blue-soft);color:var(--blue-ink);font-size:14px;margin-bottom:16px}
+.callout .ic{margin-top:1px}
+.callout .grow{flex:1;min-width:0}
+.claim-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.callout.amber{background:var(--amber-soft);color:var(--amber-ink)}
+.callout b{font-weight:600}
+.empty{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding:38px 20px;color:var(--ink-2)}
+.empty .em-ic{width:46px;height:46px;border-radius:12px;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center}
+.empty h4{margin:0;font-size:16px;color:var(--ink);font-weight:600}
+.empty p{margin:0;max-width:52ch}
+.empty .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px}
+.seg{display:inline-flex;gap:3px;padding:3px;border-radius:9px;background:var(--surface-3);flex-wrap:wrap}
+.seg button{height:32px;padding:0 12px;border:0;border-radius:6px;background:transparent;color:var(--ink-2);font-weight:500;font-size:13.5px;cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow-pop)}
+
+/* ---------- indicateurs ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.kpi{padding:17px 18px 16px;display:flex;flex-direction:column;gap:6px}
+.kpi-label{font-size:13.5px;color:var(--ink-2);font-weight:500;display:flex;align-items:center;gap:8px}
+.kpi-label .ic{width:16px;height:16px;color:var(--ink-3)}
+.kpi-value{font-size:28px;font-weight:600;letter-spacing:-.015em;line-height:1.15;overflow-wrap:anywhere}
+.kpi-value small{font-size:14.5px;font-weight:500;color:var(--ink-2);margin-left:5px;letter-spacing:0}
+.kpi-sub{font-size:13px;color:var(--ink-3);display:flex;gap:6px 10px;align-items:center;flex-wrap:wrap}
+.delta{display:inline-flex;align-items:center;gap:3px;font-weight:600}
+.delta .ic{width:15px;height:15px}
+.delta.up{color:var(--green-ink)}
+.delta.down{color:var(--red-ink)}
+
+/* ---------- tableaux ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:14px}
+.search{position:relative;flex:1 1 260px;max-width:390px}
+.search .ic{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--ink-3)}
+.search input{width:100%;height:46px;padding:0 12px 0 40px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);font-size:15px}
+.search input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.toolbar .spacer{flex:1}
+.tbl-wrap{overflow-x:auto;position:relative}
+table.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14.5px}
+.tbl th{background:var(--surface-2);color:var(--ink-2);font-size:12.5px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;text-align:left;padding:14px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl th.sortable{text-transform:none;letter-spacing:.02em;font-size:14px;color:var(--ink-2)}
+.tbl th.sortable button{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.tbl th.sortable button:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:3px}
+.tbl th.sortable .ic{width:14px;height:14px;color:var(--ink-4)}
+.tbl th.sortable.on .ic{color:var(--teal)}
+.tbl th:first-child{border-top-left-radius:var(--r-lg)}
+.tbl th:last-child{border-top-right-radius:var(--r-lg)}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--line-2);vertical-align:middle}
+.tbl tbody tr:last-child td{border-bottom:0}
+.tbl tbody tr:hover td{background:var(--surface-2)}
+.tbl th.r,.tbl td.r{text-align:right}
+.tbl td.num{white-space:nowrap}
+.tbl td small,.cell-sub{display:block;font-size:12.5px;color:var(--ink-3);margin-top:1px}
+.tbl .c-client{min-width:150px}
+.tbl .c-client b{font-weight:500;white-space:nowrap}
+.link{all:unset;cursor:pointer;font-weight:500;color:var(--ink);white-space:nowrap;border-radius:3px}
+.link:hover{color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px}
+.link:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.tbl tr[data-row]{cursor:pointer}
+.tbl .c-client small,.ref{white-space:nowrap}
+.tbl .c-next{min-width:140px;max-width:240px}
+.tbl .c-act{text-align:right;white-space:nowrap}
+.tbl .c-act .btn+.btn{margin-left:8px}
+.tbl tfoot td{font-weight:600;border-top:1px solid var(--line);border-bottom:0;background:var(--surface-2)}
+.tbl.compact td,.tbl.compact th{padding:10px 10px}
+.op-list{display:none}
+.op-card{padding:14px 16px;border-bottom:1px solid var(--line-2);display:flex;flex-direction:column;gap:9px}
+.op-card:last-child{border-bottom:0}
+.oc-top,.oc-mid,.oc-act{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.oc-mid{justify-content:space-between;align-items:flex-start;flex-wrap:nowrap}
+.oc-mid .r{text-align:right;white-space:nowrap}
+.oc-act{justify-content:flex-end}
+.oc-top{flex-wrap:nowrap}
+.oc-top .ref{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- formulaires ---------- */
+.form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+.field-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:20px}
+.field label,.field .lab{font-size:13.5px;font-weight:500;color:var(--ink-2)}
+.inp{display:flex;align-items:center;height:42px;border:1px solid var(--line);border-radius:7px;background:var(--surface);padding:0 12px;gap:8px}
+.inp:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.inp input,.inp select{flex:1;min-width:0;border:0;outline:0;background:transparent;height:100%;font-size:15px;font-variant-numeric:tabular-nums}
+.inp select{cursor:pointer}
+.inp .unit{font-size:12.5px;color:var(--ink-3);white-space:nowrap}
+.inp.is-auto{background:var(--surface-2)}
+.inp[aria-disabled="true"]{opacity:.6}
+textarea.ta{width:100%;min-height:76px;resize:vertical;border:1px solid var(--line);border-radius:7px;background:var(--surface);padding:10px 12px;font-size:14.5px}
+textarea.ta:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
+.field .help{font-size:12.5px;color:var(--ink-3);display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px}
+.auto-on{color:var(--teal-ink);font-weight:500}
+.field.err .inp{border-color:var(--red)}
+.field .errmsg{font-size:12.5px;color:var(--red-ink)}
+.auto-tag{font-size:11.5px;color:var(--teal-ink);background:var(--teal-soft);border-radius:5px;padding:2px 7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62%}
+.auto-reset{font-size:12px;border:0;background:none;color:var(--teal-ink);cursor:pointer;padding:2px 4px;display:inline-flex;gap:4px;align-items:center;border-radius:4px;white-space:nowrap}
+.auto-reset .ic{width:13px;height:13px}
+.auto-reset:hover{background:var(--teal-soft)}
+.types{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.type-btn{display:flex;align-items:flex-start;gap:10px;text-align:left;padding:12px 13px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--surface);cursor:pointer;min-width:0}
+.type-btn:hover{border-color:var(--teal-soft-2)}
+.type-btn[aria-checked="true"]{border-color:var(--teal);background:var(--teal-soft);box-shadow:inset 0 0 0 1px var(--teal)}
+.type-btn .tb-dot{width:10px;height:10px;border-radius:3px;margin-top:5px;flex:none}
+.type-btn b{display:block;font-weight:600;font-size:14.5px}
+.type-btn small{display:block;color:var(--ink-3);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.type-btn .tb-txt{min-width:0}
+.drawer .types{grid-template-columns:repeat(2,minmax(0,1fr))}
+.drawer .types .type-btn:last-child:nth-child(odd){grid-column:1/-1}
+
+/* ---------- résultats ---------- */
+.hero-res{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px 20px;padding:18px}
+.hero-res .lbl{font-size:13.5px;color:var(--ink-2);font-weight:500}
+.hero-res .big{font-size:40px;font-weight:600;letter-spacing:-.02em;line-height:1.1;margin-top:4px}
+.hero-res .big small{font-size:17px;font-weight:500;color:var(--ink-2);margin-left:6px;letter-spacing:0}
+.hero-res .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.res-mini{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:14px 16px;border-radius:var(--r-lg);background:var(--surface-2);border:1px solid var(--line-2)}
+.res-mini .big{font-size:24px;font-weight:600;letter-spacing:-.01em}
+.res-mini .lbl{font-size:12.5px;color:var(--ink-3);font-weight:500}
+.legs{list-style:none;margin:0;padding:0;counter-reset:leg}
+.leg{position:relative;display:grid;grid-template-columns:26px minmax(0,1fr) auto;column-gap:12px;row-gap:1px;padding:9px 0}
+.leg::before{counter-increment:leg;content:counter(leg);grid-row:1/3;width:24px;height:24px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);font-size:12px;font-weight:700;display:grid;place-items:center;margin-top:1px}
+.leg:not(:last-child)::after{content:"";position:absolute;left:11.5px;top:36px;bottom:-8px;width:1px;background:var(--line)}
+.leg .l-place{font-size:11.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.09em;font-weight:600}
+.leg .l-label{font-weight:500;grid-column:2}
+.leg .l-amt{grid-column:3;grid-row:1/3;text-align:right;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;align-self:center}
+.leg .l-amt small{display:block;font-size:12px;color:var(--ink-3);font-weight:400}
+.pl{display:flex;flex-direction:column}
+.pl-row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px solid var(--line-2)}
+.pl-row:last-child{border-bottom:0}
+.pl-row .v{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+.pl-row .note{display:block;font-size:12px;color:var(--ink-3);font-weight:400}
+.pl-row.total{font-weight:600}
+.pl-row.final{background:var(--teal-soft);color:var(--teal-ink);border-radius:8px;padding:11px 12px;border:0;margin-top:8px;font-weight:600}
+.pl-row.final .note{color:var(--teal-ink);opacity:.8}
+.pl-row.final.loss{background:var(--red-soft);color:var(--red-ink)}
+.pl-row.final.loss .note{color:var(--red-ink)}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:6px 8px}
+.flow .node{display:inline-flex;flex-direction:column;padding:7px 11px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line-2);line-height:1.2}
+.flow .node b{font-size:13.5px;font-weight:600}
+.flow .node small{font-size:11.5px;color:var(--ink-3)}
+.flow .ic{width:16px;height:16px;color:var(--ink-4)}
+.meter{display:flex;flex-direction:column;gap:7px;min-width:220px;flex:1;max-width:380px}
+.meter-top{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);gap:10px}
+.meter-track{position:relative;height:8px;border-radius:4px;background:var(--surface-3)}
+.meter-fill{position:absolute;left:0;top:0;bottom:0;border-radius:4px}
+.meter-mark{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink-2);border-radius:1px}
+.meter-cap{font-size:12px;color:var(--ink-3)}
+.sens td.on{background:var(--teal-soft)}
+.sens tr.thr td{background:var(--surface-2)}
+.kv{display:grid;grid-template-columns:minmax(38%,1fr) minmax(0,auto);gap:0}
+.kv>div{display:contents}
+.kv dt,.kv dd{padding:9px 0;border-bottom:1px solid var(--line-2);margin:0}
+.kv dt{color:var(--ink-2)}
+.kv dd{text-align:right;font-weight:500;font-variant-numeric:tabular-nums;padding-left:14px}
+.kv dd small{display:block;font-weight:400;color:var(--ink-3);font-size:12px}
+.kv>div:last-child dt,.kv>div:last-child dd{border-bottom:0}
+.rows{display:flex;flex-direction:column}
+.row-item{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--line-2)}
+.row-item:last-child{border-bottom:0}
+.row-item .grow{flex:1;min-width:0}
+.row-item .grow b{font-weight:500;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row-item .grow small{display:block;font-size:12.5px;color:var(--ink-3)}
+.dot{width:8px;height:8px;border-radius:2px;flex:none}
+
+/* ---------- graphique ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:10px;height:10px;border-radius:2px}
+.chart{position:relative;margin-top:12px;min-height:250px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .grid-l{stroke:var(--grid);stroke-width:1}
+.chart .axis-l{stroke:var(--axis);stroke-width:1}
+.chart .tick{fill:var(--ink-3);font-size:11.5px;font-family:var(--font)}
+.chart .lab{fill:var(--ink-2);font-size:11.5px;font-weight:600;font-family:var(--font)}
+.chart .band{fill:transparent;cursor:default}
+.chart .band:focus{outline:none}
+.chart .hlr{fill:var(--hl);opacity:0}
+.chart .hlr.on{opacity:1}
+.chart-empty{position:absolute;inset:0 0 26px 46px;display:grid;place-items:center;text-align:center;color:var(--ink-3);font-size:14px;padding:20px}
+.tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow-lg);padding:10px 12px;font-size:12.5px;min-width:190px;z-index:5}
+.tip .t-head{font-weight:600;margin-bottom:6px;color:var(--ink)}
+.tip .t-row{display:flex;align-items:center;gap:8px;padding:2px 0}
+.tip .t-row span{flex:1;color:var(--ink-2)}
+.tip .t-row b{font-variant-numeric:tabular-nums;color:var(--ink)}
+.tip .t-row.tot{border-top:1px solid var(--line-2);margin-top:4px;padding-top:6px}
+.tip .key{width:12px;height:3px;border-radius:2px;flex:none}
+
+/* ---------- étapes ---------- */
+.steps{display:flex;flex-direction:column;gap:2px}
+.step{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:7px;cursor:pointer}
+.step:hover{background:var(--surface-2)}
+.step input{appearance:none;-webkit-appearance:none;width:20px;height:20px;border:1.5px solid var(--axis);border-radius:6px;display:grid;place-items:center;margin:0;flex:none;cursor:pointer;background:var(--surface)}
+.step input:checked{background:var(--green);border-color:var(--green)}
+.step input:checked::after{content:"";width:9px;height:5px;border:2px solid var(--on-accent);border-top:0;border-right:0;transform:translateY(-1px) rotate(-45deg)}
+.step input:disabled{cursor:not-allowed}
+.step .txt{flex:1;min-width:0}
+.step.done .txt{color:var(--ink-2)}
+.step .when{font-size:12px;color:var(--ink-3);white-space:nowrap}
+.progress{display:flex;gap:4px}
+.progress i{flex:1;height:4px;border-radius:2px;background:var(--surface-3)}
+.progress i.on{background:var(--green)}
+
+/* ---------- partenaires ---------- */
+.pcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.pcard{display:flex;flex-direction:column}
+.pc-head{display:flex;align-items:center;gap:12px;padding:16px 18px 4px}
+.pc-av{width:42px;height:42px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-weight:600;font-size:15px;flex:none}
+.pc-head h3{margin:0;font-size:16px;font-weight:600}
+.pc-head small{display:block;color:var(--ink-3);font-size:13px}
+.pcard .card-body{flex:1}
+.pc-foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px 18px 16px;border-top:1px solid var(--line-2)}
+.confirm{display:flex;flex-wrap:wrap;gap:10px;align-items:center;width:100%}
+.confirm p{margin:0;flex:1 1 200px;font-size:13.5px;color:var(--ink-2)}
+
+/* ---------- panneau latéral ---------- */
+.drawer-wrap{position:fixed;inset:0;z-index:70}
+.drawer-bg{position:absolute;inset:0;background:var(--scrim)}
+.drawer{position:absolute;top:0;right:0;bottom:0;width:min(580px,100%);background:var(--surface);display:flex;flex-direction:column;box-shadow:var(--shadow-lg);padding-top:env(safe-area-inset-top,0px);padding-right:env(safe-area-inset-right,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.anim{animation:slidein .2s ease}
+.dr-head{display:flex;align-items:flex-start;gap:12px;padding:18px 20px 16px;border-bottom:1px solid var(--line)}
+.dr-head .grow{flex:1;min-width:0}
+.dr-kicker{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.dr-head h2{margin:8px 0 2px;font-size:20px;font-weight:600;overflow-wrap:anywhere}
+.dr-sub{display:flex;gap:8px;align-items:center;flex-wrap:wrap;color:var(--ink-2);font-size:13.5px}
+.dr-body{flex:1;overflow-y:auto;padding:18px 20px 26px;display:flex;flex-direction:column;gap:22px}
+.dr-sec h4{margin:0 0 8px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.dr-foot{display:flex;align-items:center;gap:10px;padding:14px 20px;border-top:1px solid var(--line);background:var(--surface-2);flex-wrap:wrap}
+.dr-foot .spacer{flex:1}
+@keyframes slidein{from{transform:translateX(28px);opacity:.5}to{transform:none;opacity:1}}
+
+/* ---------- notification ---------- */
+.toast{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:90;width:min(430px,calc(100% - 32px));background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow-lg);padding:14px 10px 14px 16px;display:flex;gap:12px;align-items:center}
+body.dr-open .toast{bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+.toast .t-ic{color:var(--green);display:grid}
+.toast .t-ic.error{color:var(--red)}
+.toast .t-msg{flex:1;font-size:14px}
+
+/* ---------- réglages ---------- */
+.set-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(170px,1fr) minmax(0,1fr);gap:8px 16px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line-2)}
+.set-row:last-child{border-bottom:0}
+.set-row .lab b{display:block;font-weight:500}
+.set-row .lab small{display:block;color:var(--ink-3);font-size:12.5px}
+.set-row .meta{font-size:12.5px;color:var(--ink-3);text-align:right}
+.corr-row{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:8px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.corr-row .inp:last-child{grid-column:1/-1}
+.corr-row:last-child{border-bottom:0}
+.part-row{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);gap:10px 14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line-2)}
+.part-row:last-child{border-bottom:0}
+.save-row{display:flex;justify-content:flex-end;gap:10px;align-items:center;margin-top:14px}
+.save-row .note{flex:1;color:var(--ink-3);font-size:12.5px}
+
+.form-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.who{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.who b{font-weight:500}
+.mini-av{width:32px;height:32px;border-radius:50%;background:var(--teal-soft);color:var(--teal-ink);display:grid;place-items:center;font-size:12.5px;font-weight:600;flex:none}
+.mail{white-space:nowrap}
+.sim{display:grid;grid-template-columns:minmax(330px,420px) minmax(0,1fr);gap:16px;align-items:start}
+@media (min-width:1151px){.sim .form{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1366px){.hide-md{display:none}}
+@media (max-width:1240px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1150px){.g-21,.g-3{grid-template-columns:minmax(0,1fr)}.sim{grid-template-columns:minmax(0,1fr)}.types{grid-template-columns:repeat(2,minmax(0,1fr))}.types .type-btn:last-child:nth-child(odd){grid-column:1/-1}}
+@media (max-width:900px){
+  .sidebar{transform:translateX(-102%);box-shadow:var(--shadow-lg);width:calc(270px + env(safe-area-inset-left,0px))}
+  body.sb-open .sidebar{transform:none}
+  body.sb-open .sb-scrim{display:block;position:fixed;inset:0;z-index:49;background:var(--scrim)}
+  body.sb-collapsed{--sb-w:248px}
+  body.sb-collapsed .sb-word,body.sb-collapsed .nav-item .lbl,body.sb-collapsed .nav-dot,body.sb-collapsed .sb-user{display:revert}
+  .main{margin-left:0}
+  .topbar{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .content{padding-block:22px 44px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .g-2{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:1100px){.tbl-ops{display:none}.op-list{display:block}.form-3{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:760px){
+  .page-head h1{font-size:23px}
+  .sync span{display:none}
+  .set-row{grid-template-columns:minmax(0,1fr)}
+  .set-row .meta{text-align:left}
+  .part-row{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .kpis{grid-template-columns:minmax(0,1fr)}
+  .form{grid-template-columns:minmax(0,1fr)}
+  .types,.drawer .types{grid-template-columns:minmax(0,1fr)}
+  #tbnew span{display:none}
+  #tbnew{width:38px;padding:0}
+  .hero-res .big{font-size:32px}
+  .kpi-value{font-size:25px}
+  .hide-s{display:none}
+  .dr-foot{flex-wrap:nowrap}
+  .dr-foot .btn{padding:0 12px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<aside class="sidebar" id="sidebar" aria-label="Menu principal">
+  <div class="sb-head" id="sbhead"></div>
+  <nav class="sb-nav" id="nav"></nav>
+  <div class="sb-foot" id="sbfoot"></div>
+</aside>
+<div class="sb-scrim" data-act="sb-close"></div>
+<div class="main">
+  <header class="topbar">
+    <button class="icon-btn" id="sbtoggle" data-act="sb-toggle" aria-label="Afficher ou masquer le menu"></button>
+    <h2 class="tb-title" id="tbtitle">Tableau de bord</h2>
+    <div class="tb-right"><span class="sync" id="sync"></span><button class="btn btn-primary" id="tbnew" data-act="new-op"></button></div>
+  </header>
+  <main class="content" id="view" tabindex="-1"></main>
+</div>
+<div class="drawer-wrap" id="drawer" hidden></div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+'use strict';
+const ICONS = {"layout-grid":"<rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\"/>","calculator":"<rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/>","scroll-text":"<path d=\"M15 12h-5\"/><path d=\"M15 8h-5\"/><path d=\"M19 17V5a2 2 0 0 0-2-2H4\"/><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\"/>","arrow-left-right":"<path d=\"M8 3 4 7l4 4\"/><path d=\"M4 7h16\"/><path d=\"m16 21 4-4-4-4\"/><path d=\"M20 17H4\"/>","hand-coins":"<path d=\"M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17\"/><path d=\"m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9\"/><path d=\"m2 16 6 6\"/><circle cx=\"16\" cy=\"9\" r=\"2.9\"/><circle cx=\"6\" cy=\"5\" r=\"3\"/>","send":"<path d=\"M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z\"/><path d=\"m21.854 2.147-10.94 10.939\"/>","route":"<circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15\"/><circle cx=\"18\" cy=\"5\" r=\"3\"/>","users":"<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"/>","landmark":"<line x1=\"3\" x2=\"21\" y1=\"22\" y2=\"22\"/><line x1=\"6\" x2=\"6\" y1=\"18\" y2=\"11\"/><line x1=\"10\" x2=\"10\" y1=\"18\" y2=\"11\"/><line x1=\"14\" x2=\"14\" y1=\"18\" y2=\"11\"/><line x1=\"18\" x2=\"18\" y1=\"18\" y2=\"11\"/><polygon points=\"12 2 20 7 4 7\"/>","settings":"<path d=\"M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>","panel-left":"<rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\"/><path d=\"M9 3v18\"/>","search":"<circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/>","plus":"<path d=\"M5 12h14\"/><path d=\"M12 5v14\"/>","file-text":"<path d=\"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z\"/><path d=\"M14 2v4a2 2 0 0 0 2 2h4\"/><path d=\"M10 9H8\"/><path d=\"M16 13H8\"/><path d=\"M16 17H8\"/>","check":"<path d=\"M20 6 9 17l-5-5\"/>","circle-check":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"m9 12 2 2 4-4\"/>","circle":"<circle cx=\"12\" cy=\"12\" r=\"10\"/>","x":"<path d=\"M18 6 6 18\"/><path d=\"m6 6 12 12\"/>","trash-2":"<path d=\"M3 6h18\"/><path d=\"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6\"/><path d=\"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2\"/><line x1=\"10\" x2=\"10\" y1=\"11\" y2=\"17\"/><line x1=\"14\" x2=\"14\" y1=\"11\" y2=\"17\"/>","copy":"<rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/>","download":"<path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" x2=\"12\" y1=\"15\" y2=\"3\"/>","triangle-alert":"<path d=\"m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/>","shield-check":"<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/>","circle-pause":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"10\" x2=\"10\" y1=\"15\" y2=\"9\"/><line x1=\"14\" x2=\"14\" y1=\"15\" y2=\"9\"/>","circle-play":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><polygon points=\"10 8 16 12 10 16 10 8\"/>","arrow-right":"<path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/>","arrow-down":"<path d=\"M12 5v14\"/><path d=\"m19 12-7 7-7-7\"/>","chevrons-up-down":"<path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/>","cloud":"<path d=\"M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z\"/>","cloud-off":"<path d=\"m2 2 20 20\"/><path d=\"M5.782 5.782A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.307-.193\"/><path d=\"M21.532 16.5A4.5 4.5 0 0 0 17.5 10h-1.79A7.008 7.008 0 0 0 10 5.07\"/>","pencil":"<path d=\"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z\"/><path d=\"m15 5 4 4\"/>","trending-up":"<polyline points=\"22 7 13.5 15.5 8.5 10.5 2 17\"/><polyline points=\"16 7 22 7 22 13\"/>","trending-down":"<polyline points=\"22 17 13.5 8.5 8.5 13.5 2 7\"/><polyline points=\"16 17 22 17 22 11\"/>","info":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 16v-4\"/><path d=\"M12 8h.01\"/>","menu":"<line x1=\"4\" x2=\"20\" y1=\"12\" y2=\"12\"/><line x1=\"4\" x2=\"20\" y1=\"6\" y2=\"6\"/><line x1=\"4\" x2=\"20\" y1=\"18\" y2=\"18\"/>","wallet":"<path d=\"M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1\"/><path d=\"M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4\"/>","coins":"<circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M18.09 10.37A6 6 0 1 1 10.34 18\"/><path d=\"M7 6h1v4\"/><path d=\"m16.71 13.88.7.71-2.82 2.82\"/>","chevron-right":"<path d=\"m9 18 6-6-6-6\"/>","user":"<path d=\"M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2\"/><circle cx=\"12\" cy=\"7\" r=\"4\"/>","clock":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><polyline points=\"12 6 12 12 16 14\"/>","octagon-x":"<path d=\"m15 9-6 6\"/><path d=\"M2.586 16.726A2 2 0 0 1 2 15.312V8.688a2 2 0 0 1 .586-1.414l4.688-4.688A2 2 0 0 1 8.688 2h6.624a2 2 0 0 1 1.414.586l4.688 4.688A2 2 0 0 1 22 8.688v6.624a2 2 0 0 1-.586 1.414l-4.688 4.688a2 2 0 0 1-1.414.586H8.688a2 2 0 0 1-1.414-.586z\"/><path d=\"m9 9 6 6\"/>","sliders-horizontal":"<line x1=\"21\" x2=\"14\" y1=\"4\" y2=\"4\"/><line x1=\"10\" x2=\"3\" y1=\"4\" y2=\"4\"/><line x1=\"21\" x2=\"12\" y1=\"12\" y2=\"12\"/><line x1=\"8\" x2=\"3\" y1=\"12\" y2=\"12\"/><line x1=\"21\" x2=\"16\" y1=\"20\" y2=\"20\"/><line x1=\"12\" x2=\"3\" y1=\"20\" y2=\"20\"/><line x1=\"14\" x2=\"14\" y1=\"2\" y2=\"6\"/><line x1=\"8\" x2=\"8\" y1=\"10\" y2=\"14\"/><line x1=\"16\" x2=\"16\" y1=\"18\" y2=\"22\"/>","list-checks":"<path d=\"m3 17 2 2 4-4\"/><path d=\"m3 7 2 2 4-4\"/><path d=\"M13 6h8\"/><path d=\"M13 12h8\"/><path d=\"M13 18h8\"/>","user-cog":"<circle cx=\"18\" cy=\"15\" r=\"3\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M10 15H6a4 4 0 0 0-4 4v2\"/><path d=\"m21.7 16.4-.9-.3\"/><path d=\"m15.2 13.9-.9-.3\"/><path d=\"m16.6 18.7.3-.9\"/><path d=\"m19.1 12.2.3-.9\"/><path d=\"m19.6 18.7-.4-1\"/><path d=\"m16.8 12.3-.4-1\"/><path d=\"m14.3 16.6 1-.4\"/><path d=\"m20.7 13.8 1-.4\"/>","user-plus":"<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><line x1=\"19\" x2=\"19\" y1=\"8\" y2=\"14\"/><line x1=\"22\" x2=\"16\" y1=\"11\" y2=\"11\"/>","user-check":"<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><polyline points=\"16 11 18 13 22 9\"/>","mail":"<rect width=\"20\" height=\"16\" x=\"2\" y=\"4\" rx=\"2\"/><path d=\"m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7\"/>","globe":"<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"/><path d=\"M2 12h20\"/>"};
+const icon = (n, c = '') => `<svg class="ic${c ? ' ' + c : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n] || ''}</svg>`;
+
+/* ===================== utilitaires ===================== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const isObj = v => v !== null && typeof v === 'object' && !Array.isArray(v);
+const val = (x, ...a) => (typeof x === 'function' ? x(...a) : x);
+function mergeDeep(t, s) {
+  for (const k of Object.keys(s || {})) {
+    const v = s[k];
+    if (isObj(v)) t[k] = mergeDeep(isObj(t[k]) ? { ...t[k] } : {}, v);
+    else if (v !== undefined) t[k] = Array.isArray(v) ? v.slice() : v;
+  }
+  return t;
+}
+const getPath = (o, p) => p.split('.').reduce((a, k) => (a == null ? a : a[k]), o);
+function setPath(o, p, v) { const ks = p.split('.'); let c = o; ks.slice(0, -1).forEach(k => { if (!isObj(c[k])) c[k] = {}; c = c[k]; }); c[ks[ks.length - 1]] = v; return o; }
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('chg:' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('chg:' + k, JSON.stringify(v)); } catch { /* stockage indisponible */ } },
+};
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const newId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 9);
+const plural = (n, one, many) => `${fmt(n)} ${n > 1 ? many : one}`;
+
+/* nombres (fr-FR) */
+const NFC = new Map();
+function nf(min, max) { const k = min + ':' + max; if (!NFC.has(k)) NFC.set(k, new Intl.NumberFormat('fr-FR', { minimumFractionDigits: min, maximumFractionDigits: max })); return NFC.get(k); }
+function fmt(n, min = 0, max = min) { if (n == null || !isFinite(n)) return '—'; if (Math.abs(n) < 0.5 / 10 ** max) n = 0; return nf(min, max).format(n); }
+const DEC = { USDT: 2, AED: 2, XAF: 0, GNF: 0, XOF: 0, SLE: 2 };
+const NB = ' ';
+function money(n, cur, o = {}) {
+  if (n == null || !isFinite(n)) return '—';
+  const d = o.d ?? DEC[cur] ?? 2; const s = fmt(n, d);
+  return (o.sign && n > 0 && s !== fmt(0, d) ? '+' : '') + s + NB + cur;
+}
+const RATE_FMT = { 'AED/USDT': [3, 4], 'XAF/USDT': [0, 2], 'GNF/USDT': [0, 0], 'XOF/AED': [2, 2], 'XAF/XOF': [2, 4] };
+function fmtRate(n, unit, withUnit = true) { const [a, b] = RATE_FMT[unit] || [0, 4]; return fmt(n, a, b) + (withUnit ? NB + unit : ''); }
+function fmtPct(x, d = 2) { if (x == null || !isFinite(x)) return '—'; return fmt(x * 100, d) + ' %'; }
+const NFCOMP = new Intl.NumberFormat('fr-FR', { notation: 'compact', maximumFractionDigits: 1 });
+const fmtCompact = n => NFCOMP.format(Math.abs(n) < 1e-9 ? 0 : n);
+function parseNum(v) {
+  if (typeof v === 'number') return v;
+  let s = String(v ?? '').trim().replace(/[\s  ]/g, '');
+  if (!s) return NaN;
+  if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '');
+  s = s.replace(',', '.');
+  if (!/^[-+]?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN;
+  return Number(s);
+}
+function fmtInput(n, max = 6) { if (n == null || n === '' || !isFinite(n)) return ''; return nf(0, max).format(n); }
+const round = (n, d = 6) => Math.round(n * 10 ** d) / 10 ** d;
+const signCls = n => (n > 0.0049 ? 'pos' : n < -0.0049 ? 'neg' : '');
+
+/* dates */
+const pad = n => String(n).padStart(2, '0');
+const toISO = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const fromISO = s => { const [y, m, d] = String(s).split('-').map(Number); return new Date(y, (m || 1) - 1, d || 1, 12); };
+const todayISO = () => toISO(new Date());
+const addDays = (iso, n) => { const d = fromISO(iso); d.setDate(d.getDate() + n); return toISO(d); };
+const DF = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
+const DFS = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short' });
+const DFM = new Intl.DateTimeFormat('fr-FR', { month: 'short', year: '2-digit' });
+const DFML = new Intl.DateTimeFormat('fr-FR', { month: 'long', year: 'numeric' });
+const DTF = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+const fdate = iso => (iso ? DF.format(fromISO(iso)) : '—');
+const fstamp = ts => { if (!ts) return '—'; const d = new Date(ts); return isNaN(d) ? '—' : DTF.format(d); };
+
+/* ===================== paramètres par défaut (réunion du 28 oct. 2026) ===================== */
+const DEFAULT_CONFIG = {
+  rates: { aedMarket: 3.665, xafKa: 612, gnfRef: 8700, xofAed: 170, xofXaf: 1, ijar: 628.5, localProvider: 2404 },
+  ratesMeta: {},
+  margins: { nousSpread: 0.005, doudouXaf: 3, doudouGnf: 100, congoXaf: 3, localSpread: 94 },
+  commissions: {
+    doudouXaf: { priority: 2, max: 1 },
+    doudouGnf: { priority: 100, max: 0 },
+    zoer: { priority: 0, max: 0 },
+  },
+  risk: { maxMove: 1 },
+  local: { currency: 'SLE', country: 'Sierra Leone', partner: 'Nouhoum', base: 100 },
+  congoCapital: 100000000,
+  corridors: {
+    mali: { status: 'actif', note: 'Corridor prioritaire depuis la réunion du 28 oct. 2026.' },
+    congo: { status: 'actif', note: 'Clients du Congo qui paient à Dubaï, apporteur Zoer.' },
+    gabon: { status: 'pause', note: 'En pause depuis le 28 oct. 2026 : risque de change sur le cycle USDT → Mali → XAF.' },
+  },
+  partners: {
+    nous: { name: 'Nous', role: 'Contrepartie USDT → AED à Dubaï' },
+    doudou: { name: 'Doudou', role: 'Apporteur, ventes USDT en XAF et GNF' },
+    zoer: { name: 'Zoer', role: 'Apporteur, transferts Congo → Dubaï' },
+    ka: { name: 'KA', role: 'Fournisseur USDT contre XAF' },
+    me: { name: 'Me', role: 'Contrepartie XOF → XAF (Mali)' },
+  },
+};
+const RATE_DEFS = [
+  { key: 'aedMarket', label: 'USDT → AED, marché Dubaï', unit: 'AED/USDT', src: 'Réunion du 28 oct. : 3,665' },
+  { key: 'xafKa', label: () => `Achat USDT chez ${pname('ka')}`, unit: 'XAF/USDT' },
+  { key: 'gnfRef', label: () => `Référence GNF (règlement avec ${pname('nous')})`, unit: 'GNF/USDT' },
+  { key: 'xofAed', label: 'Taux client Mali', unit: 'XOF/AED' },
+  { key: 'xofXaf', label: () => `XOF → XAF avec ${pname('me')}`, unit: 'XAF/XOF' },
+  { key: 'ijar', label: 'Concurrent Ijar (référence)', unit: 'XAF/USDT', src: 'Réunion du 28 oct. : 628,5' },
+  { key: 'localProvider', label: () => `Taux ${S.config.local.partner}, ${S.config.local.country}`, unit: () => localUnit(normCur(S.config.local.currency), S.config.local.base), src: 'Opération du 29 oct. : 2\u202f404' },
+];
+const CORRIDORS = [['mali', 'Mali → Dubaï'], ['congo', 'Congo → Dubaï'], ['gabon', 'Gabon → Dubaï']];
+const PARTNER_IDS = ['nous', 'doudou', 'zoer', 'ka', 'me'];
+const pname = id => (id && S.config.partners?.[id]?.name) || id || '—';
+const apporteurOptions = () => [['doudou', pname('doudou')], ['zoer', pname('zoer')], ['', 'Aucun']];
+
+function ruleFor(partner, cur, c) {
+  if (partner === 'doudou') return cur === 'GNF' ? c.commissions.doudouGnf : c.commissions.doudouXaf;
+  if (partner === 'zoer') return c.commissions.zoer;
+  return null;
+}
+function suggestCommission(unitMargin, rule) {
+  if (!rule || !isFinite(unitMargin)) return 0;
+  return round(Math.min(rule.max, Math.max(0, unitMargin - rule.priority)), 4);
+}
+function ruleHint(partner, cur, c) {
+  const r = ruleFor(partner, cur, c); if (!r) return 'sans commission';
+  if (!(r.max > 0)) return 'taux à définir';
+  return r.priority > 0 ? `${fmt(r.priority, 0, 2)} d'abord pour nous, puis max ${fmt(r.max, 0, 2)}` : `${fmt(r.max, 0, 2)} par USDT`;
+}
+const perUsdt = (n, cur) => `${fmt(n, 0, cur === 'AED' ? 4 : 2)}${NB}${cur} par USDT`;
+const localUnit = (cur, base) => `${cur}/${Number(base) === 1 ? '' : '100 '}USDT`;
+const normCur = s => String(s || '').trim().toUpperCase();
+const normBase = b => (Number(b) === 1 ? 1 : 100);
+const receiptLabel = (acct, cur) => acct === 'SBI' ? 'Compte SBI' : acct === 'Nous' ? `Compte de ${pname('nous')}` : cur === 'GNF' ? 'Encaissement GNF' : 'Autre compte';
+
+/* ===================== modèles des flux ===================== */
+function computeNous(i) {
+  const q = i.usdt, rM = i.rateMarket, rC = i.rateClient, fees = i.fees || 0;
+  const aedOut = q * rC, aedIn = q * rM, grossAed = aedIn - aedOut;
+  const grossUsdt = grossAed / rM, netUsdt = grossUsdt - fees, N = pname('nous');
+  return {
+    volumeUsdt: q, grossUsdt, netUsdt, marginPct: netUsdt / q,
+    native: { cur: 'USDT', net: netUsdt },
+    clientRate: { value: rC, unit: 'AED/USDT' },
+    spread: rM - rC,
+    legs: [
+      { place: N, label: `USDT reçus de ${N}`, amount: q, cur: 'USDT' },
+      { place: 'Dubaï', label: `AED remis à ${N}`, amount: aedOut, cur: 'AED', rate: rC, unit: 'AED/USDT' },
+      { place: 'Marché', label: 'USDT revendus en AED', amount: aedIn, cur: 'AED', rate: rM, unit: 'AED/USDT' },
+    ],
+    pl: [
+      { label: 'AED obtenus en revendant les USDT', amount: aedIn, cur: 'AED' },
+      { label: `AED remis à ${N}`, amount: -aedOut, cur: 'AED' },
+      { label: 'Marge brute', amount: grossAed, cur: 'AED', total: true, note: `${perUsdt(rM - rC, 'AED')}, soit ${money(grossUsdt, 'USDT')}` },
+      fees ? { label: 'Frais', amount: -fees, cur: 'USDT' } : null,
+      { label: 'Marge nette', amount: netUsdt, cur: 'USDT', final: true, note: fmtPct(netUsdt / q) },
+    ].filter(Boolean),
+  };
+}
+function computeSale(i, cfg, kind) {
+  const cur = kind === 'congo' ? 'XAF' : (i.currency === 'GNF' ? 'GNF' : 'XAF');
+  const u = cur + '/USDT', q = i.usdt, rK = i.rateCost, rC = i.rateClient, fees = i.fees || 0;
+  const comm = i.apporteur ? (i.commissionRate || 0) : 0;
+  const received = q * rC, cost = q * rK, unit = rC - rK;
+  const grossL = q * unit, commL = q * comm, feesL = fees * rK, netL = grossL - commL - feesL, netUsdt = netL / rK;
+  const acct = receiptLabel(i.receipt, cur), K = pname('ka');
+  const r = {
+    volumeUsdt: q, grossUsdt: grossL / rK, netUsdt, marginPct: netUsdt / q,
+    native: { cur, net: netL },
+    clientRate: { value: rC, unit: u },
+    unit: unit,
+    commission: comm > 0 ? { partner: i.apporteur, amount: commL, cur, rate: comm, unit: u } : null,
+    receipt: { account: i.receipt, amount: received, cur },
+  };
+  r.legs = cur === 'GNF' ? [
+    { place: acct, label: 'Paiement du client', amount: received, cur, rate: rC, unit: u },
+    { place: 'Client', label: 'USDT livrés au client', amount: q, cur: 'USDT', sub: `référence ${fmtRate(rK, u)}` },
+  ] : [
+    { place: acct, label: kind === 'congo' ? 'Virement du client (Congo)' : 'Paiement du client', amount: received, cur, rate: rC, unit: u },
+    { place: K, label: `USDT achetés chez ${K}`, amount: q, cur: 'USDT', rate: rK, unit: u },
+    { place: kind === 'congo' ? 'Dubaï' : 'Client', label: kind === 'congo' ? 'USDT envoyés au client à Dubaï' : 'USDT livrés au client', amount: q, cur: 'USDT' },
+  ];
+  r.pl = [
+    { label: 'Encaissé auprès du client', amount: received, cur },
+    { label: cur === 'GNF' ? 'Valeur de référence des USDT' : `Coût des USDT (${K})`, amount: -cost, cur },
+    { label: 'Marge brute', amount: grossL, cur, total: true, note: perUsdt(unit, cur) },
+    comm > 0 ? { label: `Commission ${pname(i.apporteur)}`, amount: -commL, cur, note: perUsdt(comm, cur) } : null,
+    fees ? { label: 'Frais', amount: -feesL, cur, note: money(fees, 'USDT') } : null,
+    { label: 'Marge nette', amount: netL, cur, final: true, note: `${money(netUsdt, 'USDT')} · ${fmtPct(netUsdt / q)}` },
+  ].filter(Boolean);
+  if (cur === 'XAF' && kind === 'doudou' && cfg.rates.ijar > 0) r.ijar = { rate: cfg.rates.ijar, saving: (cfg.rates.ijar - rC) * q };
+  return r;
+}
+function computeMali(i) {
+  const A = i.aed, r1 = i.rateXofAed, r2 = i.rateXofXaf, r3 = i.rateKa, r4 = i.rateAed, fees = i.fees || 0;
+  const xof = A * r1, xaf = xof * r2, usdt = xaf / r3, aedBack = usdt * r4;
+  const grossAed = aedBack - A, feesAed = fees * r4, netAed = grossAed - feesAed, netUsdt = netAed / r4;
+  return {
+    volumeUsdt: A / r4, grossUsdt: grossAed / r4, netUsdt, marginPct: netAed / A,
+    native: { cur: 'AED', net: netAed },
+    clientRate: { value: r1, unit: 'XOF/AED' },
+    flows: { xof, xaf, usdt, aedBack },
+    legs: [
+      { place: 'Mali', label: 'XOF encaissés auprès du client', amount: xof, cur: 'XOF', rate: r1, unit: 'XOF/AED' },
+      { place: 'Dubaï', label: 'AED remis au bénéficiaire', amount: A, cur: 'AED' },
+      { place: pname('me'), label: 'XOF vendus contre XAF', amount: xaf, cur: 'XAF', rate: r2, unit: 'XAF/XOF' },
+      { place: pname('ka'), label: 'USDT achetés en XAF', amount: usdt, cur: 'USDT', rate: r3, unit: 'XAF/USDT' },
+      { place: 'Dubaï', label: 'USDT reconvertis en AED', amount: aedBack, cur: 'AED', rate: r4, unit: 'AED/USDT' },
+    ],
+    pl: [
+      { label: 'AED reconstitués à Dubaï', amount: aedBack, cur: 'AED' },
+      { label: 'AED remis au bénéficiaire', amount: -A, cur: 'AED' },
+      { label: 'Marge brute', amount: grossAed, cur: 'AED', total: true, note: fmtPct(grossAed / A) },
+      fees ? { label: 'Frais', amount: -feesAed, cur: 'AED', note: money(fees, 'USDT') } : null,
+      { label: 'Marge nette', amount: netAed, cur: 'AED', final: true, note: `${money(netUsdt, 'USDT')} · ${fmtPct(netAed / A)}` },
+    ].filter(Boolean),
+  };
+}
+
+function computeLocal(i) {
+  const cur = normCur(i.currency) || 'SLE', base = normBase(i.base), u = localUnit(cur, base);
+  const P = String(i.partner || '').trim() || 'Partenaire', country = String(i.country || '').trim();
+  const q = i.usdt, rP = i.rateProvider / base, rC = i.rateClient / base, fees = i.fees || 0;
+  const payout = q * rC, toPartner = payout / rP, grossUsdt = q - toPartner, netUsdt = grossUsdt - fees;
+  return {
+    volumeUsdt: q, grossUsdt, netUsdt, marginPct: netUsdt / q,
+    native: { cur: 'USDT', net: netUsdt },
+    clientRate: { value: i.rateClient, unit: u },
+    spread: i.rateProvider - i.rateClient,
+    payout: { cur, amount: payout, partner: P, usdt: toPartner, country },
+    legs: [
+      { place: 'Client', label: 'USDT reçus du client', amount: q, cur: 'USDT' },
+      { place: P, label: `USDT vendus à ${P}`, amount: toPartner, cur: 'USDT', rate: i.rateProvider, unit: u },
+      { place: country || P, label: `${cur} déposés sur le compte du client`, amount: payout, cur, rate: i.rateClient, unit: u },
+    ],
+    pl: [
+      { label: 'USDT reçus du client', amount: q, cur: 'USDT' },
+      { label: `USDT vendus à ${P} pour payer le client`, amount: -toPartner, cur: 'USDT' },
+      { label: 'Marge brute', amount: grossUsdt, cur: 'USDT', total: true, note: `${fmt(i.rateProvider - i.rateClient, 0, 4)}${NB}${cur} ${base === 1 ? 'par USDT' : 'pour 100 USDT'}, soit ${money(q * (rP - rC), cur)}` },
+      fees ? { label: 'Frais', amount: -fees, cur: 'USDT' } : null,
+      { label: 'Marge nette', amount: netUsdt, cur: 'USDT', final: true, note: fmtPct(netUsdt / q) },
+    ].filter(Boolean),
+  };
+}
+
+const FLUX_ORDER = ['nous', 'doudou', 'congo', 'mali', 'local'];
+const FLUX = {
+  nous: {
+    prefix: 'NA', icon: 'arrow-left-right', short: 'USDT → AED',
+    title: () => `USDT → AED avec ${pname('nous')}`,
+    summary: () => `${pname('nous')} envoie des USDT. On lui remet des AED à Dubaï au taux marché moins le spread, puis on revend les USDT au marché.`,
+    sub: () => pname('nous'),
+    clientLabel: 'Client ou référence',
+    defaults: () => ({ usdt: 10000, fees: 0 }),
+    fields: () => [
+      { key: 'usdt', label: () => `USDT reçus de ${pname('nous')}`, unit: 'USDT', max: 2, req: true },
+      { key: 'rateMarket', label: 'Taux marché (revente des USDT)', unit: 'AED/USDT', max: 4, req: true, auto: (v, c) => c.rates.aedMarket, autoHint: 'taux du jour' },
+      { key: 'rateClient', label: () => `Taux accordé à ${pname('nous')}`, unit: 'AED/USDT', max: 4, req: true, auto: (v, c) => round(v.rateMarket - c.margins.nousSpread, 6), autoHint: c => `marché − ${fmtRate(c.margins.nousSpread, 'AED/USDT', false)}` },
+      { key: 'fees', label: 'Frais (réseau, plateforme)', unit: 'USDT', max: 2 },
+    ],
+    steps: () => [
+      { k: 'in', l: `USDT reçus de ${pname('nous')}`, todo: `Recevoir les USDT de ${pname('nous')}` },
+      { k: 'out', l: `AED remis à ${pname('nous')}`, todo: `Remettre les AED à ${pname('nous')}` },
+      { k: 'sell', l: 'USDT revendus au marché', todo: 'Revendre les USDT au marché' },
+    ],
+    sens: () => ({ key: 'rateMarket', dir: -1, label: 'Baisse du taux marché USDT → AED' }),
+    flow: () => [[pname('nous'), 'envoie USDT'], ['Dubaï', 'AED remis'], ['Marché', 'USDT revendus']],
+    compute: (i) => computeNous(i),
+  },
+  doudou: {
+    prefix: 'DD', icon: 'hand-coins', short: 'Vente USDT',
+    title: () => `Ventes USDT · ${pname('doudou')}`,
+    summary: () => `Le client paie en XAF (encaissé sur SBI, USDT rachetés chez ${pname('ka')}) ou en GNF (versé sur le compte de ${pname('nous')}). ${pname('doudou')} touche une commission négociée.`,
+    sub: () => `${pname('doudou')} · XAF, GNF`,
+    clientLabel: 'Client',
+    defaults: () => ({ currency: 'XAF', usdt: 5000, apporteur: 'doudou', fees: 0, bankRef: '' }),
+    fields: (vals) => {
+      const cur = vals.currency === 'GNF' ? 'GNF' : 'XAF', u = cur + '/USDT', mx = cur === 'GNF' ? 0 : 2;
+      return [
+        { key: 'currency', type: 'seg', label: 'Le client paie en', options: [['XAF', 'XAF (franc CFA)'], ['GNF', 'GNF (franc guinéen)']], full: true },
+        { key: 'usdt', label: 'USDT vendus au client', unit: 'USDT', max: 2, req: true },
+        { key: 'rateCost', label: cur === 'XAF' ? `Prix d'achat chez ${pname('ka')}` : 'Taux de référence', unit: u, max: mx, req: true, auto: (v, c) => (cur === 'GNF' ? c.rates.gnfRef : c.rates.xafKa), autoHint: 'taux du jour', help: cur === 'GNF' ? `Paiement versé sur le compte de ${pname('nous')}.` : '' },
+        { key: 'rateClient', label: 'Prix de vente au client', unit: u, max: mx, req: true, auto: (v, c) => v.rateCost + (cur === 'GNF' ? c.margins.doudouGnf : c.margins.doudouXaf), autoHint: c => `revient + ${fmt(cur === 'GNF' ? c.margins.doudouGnf : c.margins.doudouXaf, 0, 2)}` },
+        { key: 'apporteur', type: 'select', label: 'Apporteur', options: apporteurOptions },
+        { key: 'commissionRate', label: 'Commission apporteur', unit: u, max: 2, when: v => !!v.apporteur, auto: (v, c) => suggestCommission(v.rateClient - v.rateCost, ruleFor(v.apporteur, cur, c)), autoHint: (c, v) => ruleHint(v?.apporteur, cur, c), help: 'négociable' },
+        { key: 'receipt', type: 'select', label: "Compte d'encaissement", options: () => (cur === 'GNF' ? [['Nous', `Compte de ${pname('nous')} (Guinée)`], ['Autre', 'Autre compte']] : [['SBI', 'Compte SBI'], ['Autre', 'Autre compte']]), auto: () => (cur === 'GNF' ? 'Nous' : 'SBI') },
+        { key: 'bankRef', type: 'text', label: 'Référence du virement', placeholder: 'Ex. VIR-0042', when: v => v.receipt === 'SBI' },
+        { key: 'fees', label: 'Frais', unit: 'USDT', max: 2 },
+      ];
+    },
+    steps: (i) => {
+      const s = [];
+      if (i.currency === 'GNF') s.push({ k: 'in', l: `Paiement GNF reçu chez ${pname('nous')}`, todo: `Confirmer le paiement GNF chez ${pname('nous')}` });
+      else {
+        s.push({ k: 'in', l: i.receipt === 'SBI' ? 'Paiement XAF reçu sur SBI' : 'Paiement XAF reçu', todo: i.receipt === 'SBI' ? 'Encaisser le paiement XAF (SBI)' : 'Encaisser le paiement XAF' });
+        s.push({ k: 'buy', l: `USDT achetés chez ${pname('ka')}`, todo: `Acheter les USDT chez ${pname('ka')}` });
+      }
+      s.push({ k: 'deliver', l: 'USDT livrés au client', todo: 'Livrer les USDT au client' });
+      if (i.apporteur && i.commissionRate > 0) s.push({ k: 'comm', l: `Commission versée à ${pname(i.apporteur)}`, todo: `Verser la commission à ${pname(i.apporteur)}` });
+      return s;
+    },
+    sens: (i) => ({ key: 'rateCost', dir: 1, label: i.currency === 'GNF' ? 'Hausse du taux de référence GNF' : `Hausse du prix d'achat chez ${pname('ka')}` }),
+    flow: () => [['Client', 'paie XAF ou GNF'], ['SBI ou ' + pname('nous'), 'encaissement'], [pname('ka'), 'achat USDT'], ['Client', 'reçoit USDT']],
+    compute: (i, c) => computeSale(i, c, 'doudou'),
+  },
+  congo: {
+    prefix: 'CG', icon: 'send', short: 'Congo → Dubaï',
+    title: () => 'Transferts Congo → Dubaï',
+    summary: () => `Le client du Congo vire des XAF. On achète des USDT chez ${pname('ka')} et on les lui envoie à Dubaï. Apporteur : ${pname('zoer')}.`,
+    sub: () => `Apporteur ${pname('zoer')}`,
+    clientLabel: 'Client (Congo)',
+    defaults: () => ({ usdt: 10000, apporteur: 'zoer', fees: 0, bankRef: '' }),
+    fields: () => [
+      { key: 'usdt', label: 'USDT envoyés au client', unit: 'USDT', max: 2, req: true },
+      { key: 'rateCost', label: () => `Prix d'achat chez ${pname('ka')}`, unit: 'XAF/USDT', max: 2, req: true, auto: (v, c) => c.rates.xafKa, autoHint: 'taux du jour' },
+      { key: 'rateClient', label: 'Taux appliqué au client', unit: 'XAF/USDT', max: 2, req: true, auto: (v, c) => v.rateCost + c.margins.congoXaf, autoHint: c => `revient + ${fmt(c.margins.congoXaf, 0, 2)}` },
+      { key: 'apporteur', type: 'select', label: 'Apporteur', options: apporteurOptions },
+      { key: 'commissionRate', label: 'Commission apporteur', unit: 'XAF/USDT', max: 2, when: v => !!v.apporteur, auto: (v, c) => suggestCommission(v.rateClient - v.rateCost, ruleFor(v.apporteur, 'XAF', c)), autoHint: (c, v) => ruleHint(v?.apporteur, 'XAF', c) },
+      { key: 'receipt', type: 'select', label: "Compte d'encaissement", options: [['SBI', 'Compte SBI'], ['Autre', 'Autre compte']], auto: () => 'SBI' },
+      { key: 'bankRef', type: 'text', label: 'Référence du virement', placeholder: 'Ex. VIR-0042', when: v => v.receipt === 'SBI' },
+      { key: 'fees', label: 'Frais', unit: 'USDT', max: 2 },
+    ],
+    steps: (i) => {
+      const s = [
+        { k: 'in', l: i.receipt === 'SBI' ? 'Virement XAF reçu sur SBI' : 'Virement XAF reçu', todo: 'Encaisser le virement XAF' },
+        { k: 'buy', l: `USDT achetés chez ${pname('ka')}`, todo: `Acheter les USDT chez ${pname('ka')}` },
+        { k: 'send', l: 'USDT envoyés au client à Dubaï', todo: 'Envoyer les USDT à Dubaï' },
+      ];
+      if (i.apporteur && i.commissionRate > 0) s.push({ k: 'comm', l: `Commission versée à ${pname(i.apporteur)}`, todo: `Verser la commission à ${pname(i.apporteur)}` });
+      return s;
+    },
+    sens: () => ({ key: 'rateCost', dir: 1, label: `Hausse du prix d'achat chez ${pname('ka')}` }),
+    flow: () => [['Client Congo', 'vire XAF'], ['SBI', 'encaissement'], [pname('ka'), 'achat USDT'], ['Dubaï', 'USDT envoyés']],
+    compute: (i, c) => computeSale(i, c, 'congo'),
+  },
+  mali: {
+    prefix: 'ML', icon: 'route', short: 'Mali → Dubaï',
+    title: () => 'Corridor Mali → Dubaï',
+    summary: () => `On remet des AED à Dubaï contre des XOF encaissés au Mali, on vend les XOF contre des XAF avec ${pname('me')}, on rachète des USDT chez ${pname('ka')} puis on les reconvertit en AED à Dubaï.`,
+    sub: () => `Via ${pname('me')} et ${pname('ka')}`,
+    clientLabel: 'Client ou bénéficiaire',
+    defaults: () => ({ aed: 100000, fees: 0 }),
+    fields: () => [
+      { key: 'aed', label: 'AED remis au bénéficiaire', unit: 'AED', max: 2, req: true, help: 'Montant livré à Dubaï.' },
+      { key: 'rateXofAed', label: 'Taux client', unit: 'XOF/AED', max: 4, req: true, auto: (v, c) => c.rates.xofAed, autoHint: 'taux du jour', help: 'XOF encaissés au Mali pour 1 AED.' },
+      { key: 'rateXofXaf', label: () => `Vente XOF → XAF avec ${pname('me')}`, unit: 'XAF/XOF', max: 4, req: true, auto: (v, c) => c.rates.xofXaf, autoHint: 'taux du jour' },
+      { key: 'rateKa', label: () => `Achat USDT chez ${pname('ka')}`, unit: 'XAF/USDT', max: 2, req: true, auto: (v, c) => c.rates.xafKa, autoHint: 'taux du jour' },
+      { key: 'rateAed', label: 'Conversion USDT → AED (Dubaï)', unit: 'AED/USDT', max: 4, req: true, auto: (v, c) => c.rates.aedMarket, autoHint: 'taux du jour' },
+      { key: 'fees', label: 'Frais', unit: 'USDT', max: 2 },
+    ],
+    steps: () => [
+      { k: 'collect', l: 'XOF encaissés au Mali', todo: 'Encaisser les XOF au Mali' },
+      { k: 'pay', l: 'AED remis au bénéficiaire', todo: 'Remettre les AED à Dubaï' },
+      { k: 'swap', l: `XOF vendus contre XAF (${pname('me')})`, todo: `Vendre les XOF contre XAF (${pname('me')})` },
+      { k: 'buy', l: `USDT achetés chez ${pname('ka')}`, todo: `Acheter les USDT chez ${pname('ka')}` },
+      { k: 'back', l: 'USDT reconvertis en AED', todo: 'Reconvertir les USDT en AED' },
+    ],
+    sens: () => ({ key: 'rateKa', dir: 1, label: `Hausse du prix d'achat USDT chez ${pname('ka')}` }),
+    flow: () => [['Mali', 'XOF encaissés'], [pname('me'), 'XOF → XAF'], [pname('ka'), 'XAF → USDT'], ['Dubaï', 'USDT → AED']],
+    compute: (i) => computeMali(i),
+  },
+  local: {
+    prefix: 'LC', icon: 'globe', short: 'USDT → devise locale',
+    title: () => 'USDT → devise locale',
+    summary: () => `Le client envoie des USDT et reçoit de la devise locale sur son compte. On vend les USDT à un partenaire local (${S.config.local.partner}, ${S.config.local.country}) à un meilleur taux : il dépose la devise chez le client.`,
+    sub: () => `${S.config.local.partner} · ${S.config.local.country}`,
+    clientLabel: 'Client',
+    defaults: (c) => ({ currency: normCur(c.local.currency), country: c.local.country, partner: c.local.partner, base: String(normBase(c.local.base)), usdt: 10000, fees: 0 }),
+    fields: (vals, c) => {
+      const cur = normCur(vals.currency) || normCur(c.local.currency) || 'SLE', base = normBase(vals.base), u = localUnit(cur, base);
+      const P = String(vals.partner || '').trim() || 'du partenaire', isDef = cur === normCur(c.local.currency), k = base / normBase(c.local.base);
+      return [
+        { key: 'currency', type: 'text', label: 'Devise versée au client', placeholder: 'SLE', restructure: true },
+        { key: 'country', type: 'text', label: 'Pays', placeholder: 'Sierra Leone' },
+        { key: 'partner', type: 'text', label: 'Partenaire local', placeholder: 'Nouhoum', restructure: true, help: 'Il achète les USDT et dépose la devise chez le client.' },
+        { key: 'base', type: 'seg', label: 'Taux exprimés', options: [['100', 'pour 100 USDT'], ['1', 'pour 1 USDT']] },
+        { key: 'usdt', label: 'USDT reçus du client', unit: 'USDT', max: 2, req: true, full: true },
+        { key: 'rateProvider', label: `Taux ${P === 'du partenaire' ? P : 'de ' + P}`, unit: u, max: 4, req: true, auto: (v, cc) => (isDef ? round(cc.rates.localProvider * k, 6) : NaN), autoHint: () => (isDef ? 'taux du jour' : 'à saisir pour cette devise') },
+        { key: 'rateClient', label: 'Taux accordé au client', unit: u, max: 4, req: true, auto: (v, cc) => (isDef ? round(v.rateProvider - cc.margins.localSpread * k, 6) : NaN), autoHint: (cc) => (isDef ? `taux ${P === 'du partenaire' ? P : 'de ' + P} − ${fmt(cc.margins.localSpread * k, 0, 4)}` : 'à saisir pour cette devise') },
+        { key: 'fees', label: 'Frais (réseau)', unit: 'USDT', max: 2 },
+      ];
+    },
+    steps: (i) => {
+      const P = String(i.partner || '').trim() || 'le partenaire', cur = normCur(i.currency) || 'devise';
+      return [
+        { k: 'in', l: 'USDT reçus du client', todo: 'Recevoir les USDT du client' },
+        { k: 'sell', l: `USDT envoyés à ${P}`, todo: `Envoyer les USDT à ${P}` },
+        { k: 'payout', l: `${cur} déposés chez le client`, todo: `Confirmer le dépôt des ${cur} chez le client` },
+      ];
+    },
+    sens: (i) => { const P = String(i.partner || '').trim(); return { key: 'rateProvider', dir: -1, label: P ? `Baisse du taux de ${P}` : 'Baisse du taux du partenaire' }; },
+    flow: () => [['Client', 'envoie des USDT'], [S.config.local.partner, 'achète les USDT'], [S.config.local.country, `${normCur(S.config.local.currency)} déposés chez le client`]],
+    compute: (i) => computeLocal(i),
+  },
+};
+
+/* résolution des champs (valeurs automatiques tant qu'elles ne sont pas saisies) */
+function fieldDefs(type, vals) { return FLUX[type].fields(vals || {}, S.config); }
+function resolve(type, d) {
+  const cfg = S.config, out = {};
+  for (const f of fieldDefs(type, d.vals)) {
+    if (f.when && !f.when(out, cfg)) continue;
+    const kind = f.type || 'num';
+    let v;
+    if (f.auto && !d.manual?.[f.key]) v = f.auto(out, cfg);
+    else v = kind === 'num' ? parseNum(d.vals?.[f.key]) : (d.vals?.[f.key] ?? '');
+    if (kind === 'num' && !f.req && !isFinite(v)) v = 0;
+    out[f.key] = v;
+  }
+  return out;
+}
+function validate(type, d) {
+  const errs = {}, v = resolve(type, d);
+  for (const f of fieldDefs(type, d.vals)) {
+    if ((f.type || 'num') !== 'num' || (f.when && !f.when(v, S.config))) continue;
+    const x = v[f.key];
+    if (f.req && !(x > 0)) errs[f.key] = 'Indiquez une valeur supérieure à 0.';
+    else if (!f.req && x < 0) errs[f.key] = 'La valeur ne peut pas être négative.';
+  }
+  if ('date' in d && !d.date) errs.date = 'Choisissez une date.';
+  return errs;
+}
+function newDraft(type, vals, manual) {
+  return { type, date: todayISO(), client: '', note: '', vals: vals ? { ...vals } : { ...FLUX[type].defaults(S.config) }, manual: manual ? { ...manual } : {}, errs: {} };
+}
+function compute(type, inputs) {
+  try { const r = FLUX[type].compute(inputs, S.config); return r && isFinite(r.netUsdt) ? r : null; } catch (e) { return null; }
+}
+const opResult = op => (FLUX[op.type] ? compute(op.type, op.inputs || {}) : null);
+function opSteps(op) { return FLUX[op.type] ? FLUX[op.type].steps(op.inputs || {}) : []; }
+function progress(op) {
+  const st = opSteps(op), done = st.filter(s => op.steps?.[s.k]).length;
+  return { done, total: st.length, next: st.find(s => !op.steps?.[s.k]) || null, closed: done === st.length };
+}
+const enrich = op => ({ op, r: opResult(op), p: progress(op) });
+
+/* sensibilité : variation défavorable du taux clé */
+function netAt(type, inputs, s) {
+  const sens = FLUX[type].sens(inputs), x = { ...inputs, [sens.key]: inputs[sens.key] * (1 + sens.dir * s) };
+  const r = compute(type, x); return r ? r.netUsdt : NaN;
+}
+function breakEven(type, inputs) {
+  const n0 = netAt(type, inputs, 0);
+  if (!(n0 > 0)) return 0;
+  let lo = 0, hi = 0.5;
+  if (netAt(type, inputs, hi) > 0) return Infinity;
+  for (let k = 0; k < 48; k++) { const m = (lo + hi) / 2; if (netAt(type, inputs, m) > 0) lo = m; else hi = m; }
+  return hi;
+}
+function riskOf(type, inputs) {
+  const be = breakEven(type, inputs), th = (S.config.risk?.maxMove ?? 1) / 100;
+  return { be, th, status: be >= th ? 'ok' : be > 0 ? 'warn' : 'bad' };
+}
+function riskPill(rk) {
+  if (rk.status === 'ok') return `<span class="pill pill-green">${icon('shield-check')}Couvert</span>`;
+  if (rk.status === 'warn') return `<span class="pill pill-amber">${icon('triangle-alert')}Coussin < ${fmt(rk.th * 100, 0, 1)} %</span>`;
+  return `<span class="pill pill-red">${icon('octagon-x')}Perte</span>`;
+}
+
+/* ===================== état ===================== */
+const S = {
+  mode: 'loading', readOnly: false, canWrite: null, ops: [], opsLoaded: false,
+  config: clone(DEFAULT_CONFIG), configStored: false,
+  me: { id: null, name: '', email: null, avatarUrl: '', isOwner: false, canEdit: false }, names: {},
+  members: [], membersLoaded: false, memberEdit: null,
+  view: 'tableau-de-bord',
+  dashPeriod: LS.get('dashPeriod', '30j'), jPeriod: 'tout', sbiPeriod: '30j',
+  q: '', status: 'all', sort: { key: 'date', dir: 'desc' }, chartTable: false,
+  sim: LS.get('sim', null) || { type: 'mali', drafts: {} },
+  drawer: null, confirm: null, dirty: {},
+};
+if (!FLUX[S.sim.type]) S.sim = { type: 'mali', drafts: {} };
+
+/* ===================== stockage partagé ===================== */
+const writeChains = new Map();
+function serial(path, fn) {
+  const prev = writeChains.get(path) || Promise.resolve();
+  const next = prev.catch(() => {}).then(fn);
+  writeChains.set(path, next);
+  return next;
+}
+async function retry(fn) {
+  try { return await fn(); } catch (e) {
+    if (e && e.code === 'unavailable') { await sleep(400 + Math.random() * 700); return fn(); }
+    throw e;
+  }
+}
+const Store = {
+  db: null, user: null, dl: null,
+  async init() {
+    let db = null, user = null, dl = null;
+    try {
+      if (window.claude && typeof window.claude.use === 'function') {
+        [db, user, dl] = await Promise.all([window.claude.use('db'), window.claude.use('user'), window.claude.use('downloads')]);
+      }
+    } catch (e) { console.warn('Capacités indisponibles', e); }
+    this.user = user; this.dl = dl;
+    if (user) {
+      try { const me = await user.me(); S.me = { id: me.id, name: me.name || '', email: me.email ? String(me.email).toLowerCase() : null, avatarUrl: me.avatarUrl || '', isOwner: !!me.isOwner, canEdit: !!me.canEdit }; } catch { /* identité facultative */ }
+    }
+    if (!db) { S.mode = 'demo'; S.membersLoaded = true; renderChrome(); renderView(); return; }
+    this.db = db; S.mode = 'live';
+    if (user) { try { S.canWrite = await user.can('data.write'); if (S.canWrite === false) S.readOnly = true; } catch { /* inconnu */ } }
+    db.collection('ops').onSnapshot(snap => {
+      S.ops = snap.docs.map(d => ({ id: d.id, ...d.data() })); S.opsLoaded = true; onData();
+    }, err => onDbError(err));
+    db.collection('members').onSnapshot(snap => {
+      S.members = snap.docs.map(d => ({ id: d.id, ...d.data() })); S.membersLoaded = true; onData('members');
+    }, err => onDbError(err));
+    db.doc('config/settings').onSnapshot(snap => {
+      S.configStored = !!snap.exists;
+      S.config = mergeDeep(clone(DEFAULT_CONFIG), snap.exists ? snap.data() : {});
+      onData('config');
+    }, err => onDbError(err));
+    renderChrome(); renderView();
+  },
+  /* Chaque écriture est appliquée tout de suite à l'état local : l'écran n'attend pas le retour de la base. */
+  async write(path, fn) { if (S.mode === 'live') await serial(path, () => retry(fn)); },
+  async addOp(body) {
+    const id = newId();
+    await this.write('ops/' + id, () => this.db.collection('ops').doc(id).set(body));
+    if (!S.ops.some(o => o.id === id)) S.ops = [...S.ops, { id, ...clone(body) }];
+    onData(); return id;
+  },
+  async setOp(id, body) {
+    await this.write('ops/' + id, () => this.db.collection('ops').doc(id).set(body));
+    S.ops = S.ops.map(o => (o.id === id ? { id, ...clone(body) } : o)); onData();
+  },
+  async patchOp(id, patch) {
+    if (!S.ops.some(o => o.id === id)) return;
+    await this.write('ops/' + id, () => this.db.collection('ops').doc(id).update(patch));
+    S.ops = S.ops.map(o => (o.id === id ? mergeDeep(clone(o), patch) : o)); onData();
+  },
+  async deleteOp(id) {
+    await this.write('ops/' + id, () => this.db.collection('ops').doc(id).delete());
+    S.ops = S.ops.filter(o => o.id !== id); onData();
+  },
+  async saveMember(id, body) {
+    id = id || newId();
+    await this.write('members/' + id, () => this.db.collection('members').doc(id).set(body));
+    S.members = [...S.members.filter(m => m.id !== id), { id, ...clone(body) }]; onData('members'); return id;
+  },
+  async patchMember(id, patch) {
+    if (!S.members.some(m => m.id === id)) return;
+    await this.write('members/' + id, () => this.db.collection('members').doc(id).update(patch));
+    S.members = S.members.map(m => (m.id === id ? mergeDeep(clone(m), patch) : m)); onData('members');
+  },
+  async deleteMember(id) {
+    await this.write('members/' + id, () => this.db.collection('members').doc(id).delete());
+    S.members = S.members.filter(m => m.id !== id); onData('members');
+  },
+  async saveConfig(patch) {
+    const ref = this.db && this.db.doc('config/settings');
+    await this.write('config/settings', async () => {
+      const cur = await ref.get();
+      if (cur.exists) return ref.update(patch);
+      return ref.set(mergeDeep(clone(DEFAULT_CONFIG), patch));
+    });
+    S.config = mergeDeep(clone(S.config), patch); S.configStored = true; onData('config');
+  },
+};
+function onDbError(err) {
+  console.warn('Base de données', err);
+  if (err && err.code === 'revoked') { S.readOnly = true; renderChrome(); }
+}
+function writeFailed(e) {
+  console.warn(e);
+  const code = e && e.code;
+  if (code === 'invalid_argument' && S.canWrite === true) toast("Enregistrement refusé. L'opération a peut-être été supprimée entre-temps : rechargez la page.", 'error');
+  else if (code === 'invalid_argument') { S.readOnly = true; renderChrome(); renderView(); toast("Enregistrement refusé : votre accès ne permet pas de modifier les données. Demandez au propriétaire un accès Éditeur.", 'error'); }
+  else if (code === 'quota_exceeded') toast("L'espace de stockage est plein. Supprimez d'anciennes opérations pour en ajouter de nouvelles.", 'error');
+  else toast("Enregistrement impossible pour le moment. Vérifiez votre connexion puis réessayez.", 'error');
+}
+const ROLES = { admin: 'Administrateur', operateur: 'Opérateur' };
+function currentMember() {
+  const id = S.me.id, em = (S.me.email || '').toLowerCase();
+  return (id && S.members.find(m => (m.uids || []).includes(id))) || (em && S.members.find(m => (m.email || '').toLowerCase() === em)) || null;
+}
+const isAdmin = () => S.mode === 'demo' || S.me.isOwner || (S.membersLoaded && !S.members.length) || (currentMember() || {}).role === 'admin';
+const memberOf = (uid, mid) => (mid && S.members.find(m => m.id === mid)) || (uid && S.members.find(m => (m.uids || []).includes(uid))) || null;
+const myRef = () => (currentMember() || {}).id || null;
+const stamp = () => ({ updatedAt: new Date().toISOString(), updatedBy: S.me.id || null, updatedByMember: myRef() });
+
+/* noms des personnes (identifiants seulement dans les données) */
+let namesPending = false;
+async function resolveNames() {
+  if (!Store.user || namesPending) return;
+  const ids = new Set();
+  S.ops.forEach(o => { if (o.createdBy) ids.add(o.createdBy); if (o.updatedBy) ids.add(o.updatedBy); });
+  Object.values(S.config.ratesMeta || {}).forEach(m => m && m.by && ids.add(m.by));
+  const list = [...ids]; if (!list.length) return;
+  namesPending = true;
+  try {
+    const ps = await Store.user.profiles(list); let changed = false;
+    for (const id of list) { const n = (ps[id] && ps[id].name) || ''; if ((S.names[id] || '') !== n) { S.names[id] = n; changed = true; } }
+    if (changed) refresh();
+  } catch { /* noms facultatifs */ } finally { namesPending = false; }
+}
+function who(id, mid) {
+  const m = memberOf(id, mid); if (m) return m.name;
+  if (!id) return S.mode === 'demo' ? 'vous' : 'inconnu';
+  if (id === S.me.id) return (currentMember() || {}).name || S.me.name || 'vous';
+  return S.names[id] || 'un collaborateur';
+}
+
+/* ===================== agrégats ===================== */
+const PERIODS = {
+  '7j': { l: '7 derniers jours', s: '7 j', days: 7 },
+  '30j': { l: '30 derniers jours', s: '30 j', days: 30 },
+  '90j': { l: '90 derniers jours', s: '90 j', days: 90 },
+  '12m': { l: '12 derniers mois', s: '12 mois', days: 365 },
+  'tout': { l: 'Depuis le début', s: 'Tout', days: null },
+};
+function periodInfo(key) {
+  const p = PERIODS[key] || PERIODS['30j'], to = todayISO();
+  if (!p.days) return { key, ...p, from: null, to: null };
+  const from = addDays(to, -(p.days - 1));
+  return { key, ...p, from, to, prevFrom: addDays(from, -p.days), prevTo: addDays(from, -1) };
+}
+const inRange = (op, from, to) => (!from || op.date >= from) && (!to || op.date <= to);
+function totals(list) {
+  const t = { n: 0, vol: 0, net: 0, byFlux: {} };
+  for (const e of list) {
+    if (!e.r) continue;
+    t.n++; t.vol += e.r.volumeUsdt; t.net += e.r.netUsdt;
+    const b = t.byFlux[e.op.type] || (t.byFlux[e.op.type] = { n: 0, vol: 0, net: 0 });
+    b.n++; b.vol += e.r.volumeUsdt; b.net += e.r.netUsdt;
+  }
+  return t;
+}
+function commissionsDue(list) {
+  const due = {};
+  for (const e of list) {
+    const c = e.r && e.r.commission; if (!c || e.op.steps?.comm) continue;
+    const p = due[c.partner] || (due[c.partner] = { n: 0, byCur: {}, usdt: 0 });
+    p.n++; p.byCur[c.cur] = (p.byCur[c.cur] || 0) + c.amount; p.usdt += c.amount / (e.op.inputs.rateCost || 1);
+  }
+  return due;
+}
+const isSbi = op => (op.type === 'congo' || (op.type === 'doudou' && op.inputs?.currency !== 'GNF')) && op.inputs?.receipt === 'SBI';
+const curMix = (byCur, def = 'XAF') => Object.entries(byCur || {}).filter(([, v]) => Math.abs(v) > 0.004).map(([c, v]) => money(v, c)).join(' · ') || money(0, def);
+
+/* ===================== rendu : habillage ===================== */
+const VIEWS = {
+  'tableau-de-bord': 'Tableau de bord', 'simulateur': 'Simulateur', 'operations': 'Opérations',
+  'flux-nous': 'USDT → AED', 'flux-doudou': 'Ventes USDT', 'flux-congo': 'Congo → Dubaï', 'flux-mali': 'Mali → Dubaï', 'flux-local': 'USDT → devise locale',
+  'partenaires': 'Partenaires', 'fonds-sbi': 'Fonds SBI', 'utilisateurs': 'Utilisateurs', 'parametres': 'Paramètres',
+};
+const viewFlux = v => (v && v.startsWith('flux-') ? v.slice(5) : null);
+function renderChrome() {
+  $('#sbhead').innerHTML = `<span class="sb-logo">${icon('arrow-left-right')}</span><span class="sb-word"><b>Change</b><small>USDT · AED · XAF · GNF</small></span>`;
+  $('#sbtoggle').innerHTML = icon('panel-left');
+  const openN = S.ops.filter(o => !progress(o).closed).length;
+  const item = (v, ic, extra = '') => `<a class="nav-item${S.view === v ? ' active' : ''}" href="#${v}"${S.view === v ? ' aria-current="page"' : ''} title="${esc(VIEWS[v])}">${icon(ic)}<span class="lbl">${esc(VIEWS[v])}</span>${extra}</a>`;
+  $('#nav').innerHTML = `
+    <div class="sb-sec">Pilotage</div>
+    ${item('tableau-de-bord', 'layout-grid')}${item('simulateur', 'calculator')}
+    <div class="sb-sec">Flux</div>
+    ${item('operations', 'scroll-text', openN ? `<span class="nav-badge" aria-label="${openN} en cours">${openN}</span>` : '')}
+    ${FLUX_ORDER.map(t => item('flux-' + t, FLUX[t].icon, `<span class="nav-dot" style="background:var(--c-${t})"></span>`)).join('')}
+    <div class="sb-sec">Trésorerie</div>
+    ${item('partenaires', 'users')}${item('fonds-sbi', 'landmark')}
+    <div class="sb-sec">Administration</div>
+    ${item('utilisateurs', 'user-cog')}${item('parametres', 'settings')}`;
+  const mem = currentMember();
+  const nm = S.mode === 'demo' ? 'Mode démo' : (mem ? mem.name : S.me.name || 'Vous');
+  const role = S.mode === 'demo' ? 'Données non enregistrées' : S.readOnly ? 'Lecture seule' : mem ? (ROLES[mem.role] || ROLES.operateur) : S.me.isOwner ? 'Propriétaire' : 'Compte non relié';
+  const ini = nm.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  $('#sbfoot').innerHTML = `<span class="avatar">${S.me.avatarUrl && S.mode !== 'demo' ? `<img src="${esc(S.me.avatarUrl)}" alt="">` : esc(ini)}</span><span class="sb-user"><b>${esc(nm)}</b><small>${esc(role)}</small></span>`;
+  $('#tbtitle').textContent = VIEWS[S.view] || '';
+  const sync = $('#sync');
+  if (S.mode === 'loading') { sync.className = 'sync'; sync.innerHTML = '<i></i><span>Connexion…</span>'; }
+  else if (S.mode === 'demo') { sync.className = 'sync demo'; sync.innerHTML = '<i></i><span>Mode démo</span>'; }
+  else if (S.readOnly) { sync.className = 'sync ro'; sync.innerHTML = '<i></i><span>Lecture seule</span>'; }
+  else { sync.className = 'sync live'; sync.innerHTML = '<i></i><span>Synchronisé</span>'; }
+  const nb = $('#tbnew'); nb.innerHTML = `${icon('plus')}<span>Nouvelle opération</span>`; nb.hidden = S.readOnly;
+  document.title = 'Change USDT';
+}
+
+/* ===================== composants ===================== */
+const fluxBadge = t => `<span class="fbadge"><i style="background:var(--c-${t})"></i>${esc(FLUX[t] ? FLUX[t].short : t)}</span>`;
+function statusCell(p) {
+  if (p.closed) return `<span class="pill pill-green">${icon('circle-check')}Clôturée</span>`;
+  return `<span class="todo">${esc(p.next.todo)}</span><small>Étape ${p.done + 1} sur ${p.total}</small>`;
+}
+function progressBar(p) { return `<div class="progress" aria-hidden="true">${Array.from({ length: p.total }, (_, i) => `<i class="${i < p.done ? 'on' : ''}"></i>`).join('')}</div>`; }
+function periodSeg(scope, cur, keys = ['7j', '30j', '90j', '12m', 'tout']) {
+  return `<div class="seg" role="group" aria-label="Période">${keys.map(k => `<button type="button" data-act="period" data-scope="${scope}" data-period="${k}" aria-pressed="${k === cur}">${esc(PERIODS[k].s)}</button>`).join('')}</div>`;
+}
+function emptyBlock(ic, title, text, actions = '') { return `<div class="empty"><span class="em-ic">${icon(ic)}</span><h4>${esc(title)}</h4><p>${esc(text)}</p>${actions ? `<div class="row">${actions}</div>` : ''}</div>`; }
+function claimBanner() {
+  if (S.mode !== 'live' || S.readOnly || !S.me.id || !S.membersLoaded || !S.members.length || currentMember() || S.skipClaim) return '';
+  const list = [...S.members].sort((a, b) => String(a.name).localeCompare(String(b.name), 'fr'));
+  return `<div class="callout amber">${icon('user-check')}<div class="grow"><b>Qui êtes-vous ?</b> Choisissez votre fiche pour que vos saisies portent votre nom. Le choix est mémorisé pour ce compte claude.ai.<div class="claim-row">${list.map(m => `<button class="btn btn-soft btn-sm" data-act="user-claim" data-id="${esc(m.id)}">${icon('user-check')}${esc(m.name)}</button>`).join('')}<button class="btn btn-ghost btn-sm" data-act="claim-later">Plus tard</button></div></div></div>`;
+}
+function modeBanner() {
+  const cb = claimBanner(); if (cb) return cb;
+  if (S.mode === 'demo') return `<div class="callout amber">${icon('cloud-off')}<div><b>Mode démo.</b> Les opérations saisies ici ne sont pas enregistrées et disparaissent au rechargement. Ouvrez l'application depuis claude.ai, connecté, pour les enregistrer et les partager.</div></div>`;
+  if (S.readOnly) return `<div class="callout">${icon('info')}<div><b>Accès limité.</b> Votre niveau d'accès ne permet pas de consulter ni de saisir les opérations. Demandez au propriétaire de vous inviter comme Éditeur.</div></div>`;
+  return '';
+}
+function legsHTML(r) {
+  return `<ol class="legs">${r.legs.map(l => `<li class="leg"><span class="l-place">${esc(l.place)}</span><span class="l-label">${esc(l.label)}</span><span class="l-amt">${money(l.amount, l.cur)}${l.rate ? `<small>à ${fmtRate(l.rate, l.unit)}</small>` : l.sub ? `<small>${esc(l.sub)}</small>` : ''}</span></li>`).join('')}</ol>`;
+}
+function plHTML(r) {
+  return `<div class="pl">${r.pl.map(x => `<div class="pl-row${x.total ? ' total' : ''}${x.final ? ' final' + (x.amount < 0 ? ' loss' : '') : ''}"><span>${esc(x.label)}${x.note && !x.final ? `<span class="note">${esc(x.note)}</span>` : ''}</span><span class="v">${money(x.amount, x.cur, { sign: x.final })}${x.final && x.note ? `<span class="note">${esc(x.note)}</span>` : ''}</span></div>`).join('')}</div>`;
+}
+function riskMeter(rk) {
+  const be = isFinite(rk.be) ? rk.be : 0.5, th = rk.th, max = Math.max(th * 2, be * 1.15, 0.005);
+  const color = rk.status === 'ok' ? 'var(--green)' : rk.status === 'warn' ? 'var(--amber)' : 'var(--red)';
+  return `<div class="meter"><div class="meter-top"><span>Coussin de sécurité</span><b>${isFinite(rk.be) ? fmtPct(rk.be) : '> 50 %'}</b></div><div class="meter-track" role="img" aria-label="Coussin ${fmtPct(rk.be)} pour un seuil de ${fmtPct(th, 1)}"><span class="meter-fill" style="width:${Math.min(100, (be / max) * 100)}%;background:${color}"></span><span class="meter-mark" style="left:calc(${Math.min(100, (th / max) * 100)}% - 1px)"></span></div><span class="meter-cap">Le repère marque la variation maximale observée (${fmtPct(th, 1)}).</span></div>`;
+}
+function flowHTML(type) {
+  return `<div class="flow">${FLUX[type].flow().map((n, i) => `${i ? icon('arrow-right') : ''}<span class="node"><b>${esc(n[0])}</b><small>${esc(n[1])}</small></span>`).join('')}</div>`;
+}
+function typePicker(form, cur) {
+  return `<div class="types" role="radiogroup" aria-label="Type d'opération">${FLUX_ORDER.map(t => `<button type="button" class="type-btn" role="radio" aria-checked="${t === cur}" data-act="pick-type" data-form="${form}" data-type="${t}"><span class="tb-dot" style="background:var(--c-${t})"></span><span class="tb-txt"><b>${esc(FLUX[t].short)}</b><small>${esc(FLUX[t].sub())}</small></span></button>`).join('')}</div>`;
+}
+
+/* champs de formulaire */
+function fieldHTML(form, f, d, v, err) {
+  const id = `${form}-${f.key}`, kind = f.type || 'num', label = val(f.label), isAuto = !!f.auto && !d.manual?.[f.key];
+  const dis = S.readOnly && form !== 'sim' ? ' disabled' : '';
+  const top = kind === 'seg' ? `<span class="lab">${esc(label)}</span>` : `<label for="${id}">${esc(label)}</label>`;
+  let ctl = '';
+  if (kind === 'num') {
+    const shown = isAuto ? fmtInput(v[f.key], f.max) : (typeof d.vals[f.key] === 'number' ? fmtInput(d.vals[f.key], f.max) : (d.vals[f.key] ?? ''));
+    ctl = `<div class="inp${isAuto ? ' is-auto' : ''}"><input id="${id}" data-form="${form}" data-key="${f.key}" inputmode="decimal" autocomplete="off" value="${esc(shown)}"${dis}><span class="unit">${esc(f.unit)}</span></div>`;
+  } else if (kind === 'select') {
+    ctl = `<div class="inp"><select id="${id}" data-form="${form}" data-key="${f.key}"${dis}>${val(f.options).map(([k, l]) => `<option value="${esc(k)}"${String(v[f.key] ?? '') === k ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select></div>`;
+  } else if (kind === 'seg') {
+    ctl = `<div class="seg" role="group" aria-label="${esc(label)}">${f.options.map(([k, l]) => `<button type="button" data-act="seg" data-form="${form}" data-key="${f.key}" data-value="${esc(k)}" aria-pressed="${v[f.key] === k}"${dis}>${esc(l)}</button>`).join('')}</div>`;
+  } else {
+    ctl = `<div class="inp"><input id="${id}" data-form="${form}" data-key="${f.key}" autocomplete="off" placeholder="${esc(f.placeholder || '')}" value="${esc(d.vals[f.key] ?? '')}"${dis}></div>`;
+  }
+  return `<div class="field${f.full ? ' full' : ''}${err ? ' err' : ''}" data-field="${f.key}"><div class="field-top">${top}</div>${ctl}${helpHTML(form, f, d, v, err)}</div>`;
+}
+function helpHTML(form, f, d, v, err) {
+  if (err) return `<div class="errmsg">${esc(err)}</div>`;
+  const help = val(f.help, S.config, v);
+  if (f.auto) {
+    const hint = val(f.autoHint, S.config, v) || '';
+    const head = !d.manual?.[f.key]
+      ? `<span class="auto-on">Auto${hint ? ' · ' + esc(hint) : ''}</span>`
+      : `<span>Saisie manuelle</span><button type="button" class="auto-reset" data-act="reset-auto" data-form="${form}" data-key="${f.key}">${icon('refresh-cw')}Recalculer</button>`;
+    return `<div class="help">${head}${help ? `<span>${esc(help)}</span>` : ''}</div>`;
+  }
+  return help ? `<div class="help">${esc(help)}</div>` : '';
+}
+function fieldsHTML(form, d) {
+  const v = resolve(d.type, d), errs = d.errs || {};
+  return fieldDefs(d.type, d.vals).filter(f => !f.when || f.when(v, S.config)).map(f => fieldHTML(form, f, d, v, errs[f.key])).join('');
+}
+
+/* ===================== vue : tableau de bord ===================== */
+function kpiHTML(ic, label, value, unit, sub) {
+  return `<section class="card kpi"><div class="kpi-label">${icon(ic)}${esc(label)}</div><div class="kpi-value">${value}${unit ? `<small>${esc(unit)}</small>` : ''}</div><div class="kpi-sub">${sub || ''}</div></section>`;
+}
+function deltaHTML(cur, prev) {
+  if (prev == null) return '';
+  if (Math.abs(prev) < 0.005) return Math.abs(cur) < 0.005 ? '' : '<span class="muted">Aucune donnée sur la période précédente</span>';
+  const d = (cur - prev) / Math.abs(prev), up = d >= 0;
+  return `<span class="delta ${up ? 'up' : 'down'}">${icon(up ? 'trending-up' : 'trending-down')}${up ? '+' : ''}${fmtPct(d, 0)}</span><span>vs période précédente</span>`;
+}
+function viewDashboard() {
+  const P = periodInfo(S.dashPeriod), all = S.ops.map(enrich);
+  const cur = all.filter(e => inRange(e.op, P.from, P.to)), prev = P.prevFrom ? all.filter(e => inRange(e.op, P.prevFrom, P.prevTo)) : null;
+  const t = totals(cur), pt = prev ? totals(prev) : null;
+  const due = commissionsDue(all), dueCur = {}; let dueN = 0;
+  Object.values(due).forEach(p => { dueN += p.n; Object.entries(p.byCur).forEach(([c, v]) => { dueCur[c] = (dueCur[c] || 0) + v; }); });
+  const sbi = cur.filter(e => isSbi(e.op) && e.r), sbiAmt = sbi.reduce((a, e) => a + e.r.receipt.amount, 0), sbiTodo = sbi.filter(e => !e.op.reconciled).length;
+  const open = all.filter(e => !e.p.closed).sort((a, b) => (a.op.date < b.op.date ? -1 : 1));
+  S._chart = chartData(P, cur);
+  const dueMain = Object.keys(dueCur).length ? curMix(dueCur) : '0 XAF';
+  const loading = S.mode === 'loading' || (S.mode === 'live' && !S.opsLoaded);
+  return `
+  <div class="page-head"><div><h1>Tableau de bord</h1><p>${esc(P.l)} · ${loading ? 'chargement des opérations…' : plural(t.n, 'opération', 'opérations')}</p></div>${periodSeg('dash', S.dashPeriod)}</div>
+  ${modeBanner()}
+  <div class="kpis">
+    ${kpiHTML('trending-up', 'Marge nette', fmt(t.net, 2), 'USDT', `${t.vol > 0 ? `<span>${fmtPct(t.net / t.vol)} du volume</span>` : ''}${deltaHTML(t.net, pt && pt.net)}`)}
+    ${kpiHTML('coins', 'Volume traité', fmt(t.vol, 0), 'USDT', `<span>${plural(t.n, 'opération', 'opérations')}</span>${deltaHTML(t.vol, pt && pt.vol)}`)}
+    ${kpiHTML('hand-coins', 'Commissions à verser', esc(dueMain), '', dueN ? `<span>${Object.entries(due).map(([p, x]) => `${esc(pname(p))} : ${esc(curMix(x.byCur))}`).join(' · ')}</span>` : '<span>Aucune commission en attente</span>')}
+    ${kpiHTML('landmark', 'Fonds clients reçus sur SBI', fmt(sbiAmt, 0), 'XAF', sbi.length ? `<span>${plural(sbi.length, 'encaissement', 'encaissements')}</span>${sbiTodo ? `<span class="pill pill-amber">${sbiTodo} à rapprocher</span>` : '<span class="pill pill-green">Tout rapproché</span>'}` : '<span>Aucun encaissement sur la période</span>')}
+  </div>
+  <div class="grid g-21">
+    <section class="card">
+      <div class="card-head"><h3>Marge nette par flux</h3><div class="actions"><button class="btn btn-ghost btn-sm" data-act="chart-table" aria-pressed="${S.chartTable}">${icon(S.chartTable ? 'trending-up' : 'list-checks')}${S.chartTable ? 'Graphique' : 'Tableau'}</button></div></div>
+      <div class="card-body">
+        <div class="legend">${FLUX_ORDER.map(k => `<span><i style="background:var(--c-${k})"></i>${esc(FLUX[k].short)}</span>`).join('')}<span class="muted">en USDT, par ${S._chart.mode === 'day' ? 'jour' : S._chart.mode === 'week' ? 'semaine' : 'mois'}</span></div>
+        ${S.chartTable ? chartTableHTML(S._chart) : `<div class="chart" id="chart"></div>`}
+      </div>
+    </section>
+    <section class="card">
+      <div class="card-head"><h3>Répartition par flux</h3><span class="sub">${esc(PERIODS[S.dashPeriod].s)}</span></div>
+      <div class="card-body">${byFluxHTML(t)}</div>
+    </section>
+  </div>
+  <div class="grid g-2">
+    <section class="card">
+      <div class="card-head"><h3>Opérations en cours</h3><a class="btn btn-ghost btn-sm" href="#operations">Tout voir${icon('chevron-right')}</a></div>
+      <div class="card-body">${open.length ? `<div class="rows">${open.slice(0, 6).map(e => `<div class="row-item"><span class="dot" style="background:var(--c-${e.op.type})"></span><div class="grow"><b>${esc(e.op.client || FLUX[e.op.type].short)}</b><small class="todo">${esc(e.p.next.todo)}</small><small>${esc(e.op.ref || '')} · ${fdate(e.op.date)}</small></div><button class="btn btn-soft btn-sm" data-act="open-op" data-id="${esc(e.op.id)}">${icon('file-text')}Détail</button>${S.readOnly ? '' : `<button class="btn btn-primary btn-sm" data-act="next-step" data-id="${esc(e.op.id)}" title="Valider : ${esc(e.p.next.l)}">${icon('check')}Valider</button>`}</div>`).join('')}</div>${open.length > 6 ? `<p class="muted" style="margin:10px 0 0">${open.length - 6} autres opérations en cours.</p>` : ''}` : emptyBlock('list-checks', 'Aucune opération en cours', "Les opérations dont une étape reste à faire (encaissement, achat d'USDT, remise des AED…) s'affichent ici.", S.readOnly ? '' : `<button class="btn btn-primary btn-sm" data-act="new-op">${icon('plus')}Nouvelle opération</button><a class="btn btn-soft btn-sm" href="#simulateur">${icon('calculator')}Simulateur</a>`)}</div>
+    </section>
+    <section class="card">
+      <div class="card-head"><h3>Corridors</h3><a class="btn btn-ghost btn-sm" href="#parametres">Modifier</a></div>
+      <div class="card-body"><div class="rows">${CORRIDORS.map(([k, n]) => { const c = S.config.corridors[k] || {}; return `<div class="row-item"><div class="grow"><b>${esc(n)}</b><small>${esc(c.note || '')}</small></div>${c.status === 'pause' ? `<span class="pill">${icon('circle-pause')}En pause</span>` : `<span class="pill pill-green">${icon('circle-play')}Actif</span>`}</div>`; }).join('')}</div></div>
+    </section>
+  </div>
+  <div class="grid g-21">
+    <section class="card">
+      <div class="card-head"><h3>Économie unitaire</h3><span class="sub">pour 1 000 USDT, aux taux du jour</span></div>
+      <div class="tbl-wrap">${unitEconHTML()}</div>
+      <div class="card-foot">Commission apporteur déduite, sans frais. Les taux et règles se règlent dans Paramètres.</div>
+    </section>
+    <section class="card">
+      <div class="card-head"><h3>Taux du jour</h3><a class="btn btn-ghost btn-sm" href="#parametres">Mettre à jour</a></div>
+      <div class="card-body"><dl class="kv">${RATE_DEFS.map(r => `<div><dt>${esc(val(r.label))}</dt><dd>${fmtRate(S.config.rates[r.key], val(r.unit))}<small>${rateMetaText(r)}</small></dd></div>`).join('')}</dl></div>
+    </section>
+  </div>`;
+}
+function rateMetaText(r) {
+  const m = S.config.ratesMeta?.[r.key];
+  if (m && m.at) return `${esc(fstamp(m.at))}${m.by || m.byMember ? ' · ' + esc(who(m.by, m.byMember)) : ''}`;
+  return r.src ? esc(r.src) : 'Indicatif, à mettre à jour';
+}
+function byFluxHTML(t) {
+  if (!t.n) return emptyBlock('scroll-text', 'Aucune opération sur la période', 'Saisissez une opération ou testez un scénario dans le simulateur.');
+  return `<div class="rows">${FLUX_ORDER.map(k => { const b = t.byFlux[k] || { n: 0, vol: 0, net: 0 }; return `<div class="row-item"><span class="dot" style="background:var(--c-${k})"></span><div class="grow"><b>${esc(FLUX[k].short)}</b><small>${plural(b.n, 'opération', 'opérations')} · ${money(b.vol, 'USDT', { d: 0 })}</small></div><div class="tnum" style="text-align:right"><b class="${signCls(b.net)}">${money(b.net, 'USDT', { sign: true })}</b><small class="cell-sub">${b.vol ? fmtPct(b.net / b.vol) : '—'}</small></div></div>`; }).join('')}<div class="row-item"><span class="dot"></span><div class="grow"><b>Total</b><small>${money(t.vol, 'USDT', { d: 0 })}</small></div><div class="tnum" style="text-align:right"><b class="${signCls(t.net)}">${money(t.net, 'USDT', { sign: true })}</b><small class="cell-sub">${t.vol ? fmtPct(t.net / t.vol) : '—'}</small></div></div></div>`;
+}
+function unitEconHTML() {
+  const cases = [['nous', {}, FLUX.nous.short], ['doudou', { currency: 'XAF' }, 'Vente USDT · XAF'], ['doudou', { currency: 'GNF' }, 'Vente USDT · GNF'], ['congo', {}, FLUX.congo.short], ['mali', {}, FLUX.mali.short], ['local', {}, `USDT → ${normCur(S.config.local.currency)}`]];
+  const rows = cases.map(([type, over, label]) => {
+    const d = newDraft(type); Object.assign(d.vals, over, { fees: 0 });
+    if (type === 'mali') d.vals.aed = 1000 * S.config.rates.aedMarket; else d.vals.usdt = 1000;
+    const v = resolve(type, d), r = compute(type, v);
+    const rk = type === 'mali' && r ? riskOf(type, v) : null;
+    return `<tr><td>${fluxBadge(type).replace(esc(FLUX[type].short), esc(label))}</td><td class="num r">${r ? fmtRate(r.clientRate.value, r.clientRate.unit) : '—'}</td><td class="num r">${r && r.commission ? money(r.commission.amount, r.commission.cur) : '<span class="none">—</span>'}</td><td class="num r"><b class="${signCls(r ? r.netUsdt : 0)}">${r ? money(r.netUsdt, 'USDT', { sign: true }) : '—'}</b></td><td class="num r">${r ? fmtPct(r.marginPct) : '—'}${rk ? `<small>${rk.status === 'ok' ? 'couvre ' + fmtPct(rk.th, 0) : 'sous le seuil de ' + fmtPct(rk.th, 0)}</small>` : ''}</td></tr>`;
+  });
+  return `<table class="tbl compact"><thead><tr><th>Flux</th><th class="r">Taux client</th><th class="r">Commission</th><th class="r">Marge nette</th><th class="r">Marge</th></tr></thead><tbody>${rows.join('')}</tbody></table>`;
+}
+
+/* graphique : marge nette empilée par flux */
+function mondayOf(iso) { const d = fromISO(iso); d.setDate(d.getDate() - ((d.getDay() + 6) % 7)); return toISO(d); }
+function chartData(P, list) {
+  const mode = P.days && P.days <= 31 ? 'day' : P.days && P.days <= 120 ? 'week' : 'month';
+  let start = P.from, end = todayISO();
+  if (!start) {
+    const ds = list.map(e => e.op.date).filter(Boolean).sort();
+    start = ds[0] || addDays(end, -150);
+    if (ds.length && ds[ds.length - 1] > end) end = ds[ds.length - 1];
+  }
+  const keyOf = iso => (mode === 'day' ? iso : mode === 'week' ? mondayOf(iso) : iso.slice(0, 7));
+  const next = k => { if (mode === 'day') return addDays(k, 1); if (mode === 'week') return addDays(k, 7); const [y, m] = k.split('-').map(Number); return m === 12 ? `${y + 1}-01` : `${y}-${pad(m + 1)}`; };
+  const buckets = [], idx = new Map();
+  let k = keyOf(start); const last = keyOf(end); let guard = 0;
+  while (k <= last && guard++ < 400) {
+    idx.set(k, buckets.length);
+    const d = mode === 'month' ? fromISO(k + '-01') : fromISO(k);
+    buckets.push({ key: k, v: {}, label: mode === 'month' ? DFM.format(d) : DFS.format(d), title: mode === 'day' ? DF.format(d) : mode === 'week' ? `Semaine du ${DFS.format(d)}` : DFML.format(d) });
+    k = next(k);
+  }
+  for (const e of list) { if (!e.r) continue; const i = idx.get(keyOf(e.op.date)); if (i == null) continue; const b = buckets[i]; b.v[e.op.type] = (b.v[e.op.type] || 0) + e.r.netUsdt; }
+  return { mode, buckets, any: list.some(e => e.r) };
+}
+function niceTicks(min, max, count = 4) {
+  if (max === min) max = min + 1;
+  const raw = (max - min) / count, mag = 10 ** Math.floor(Math.log10(raw)), e = raw / mag;
+  const step = (e >= 7.5 ? 10 : e >= 3.5 ? 5 : e >= 1.5 ? 2 : 1) * mag;
+  const lo = Math.floor(min / step) * step, hi = Math.ceil(max / step) * step, ticks = [];
+  for (let v = lo; v <= hi + step / 2; v += step) ticks.push(round(v, 9));
+  return { lo, hi, ticks };
+}
+function barPath(x, y, w, h, rt, rb) {
+  rt = Math.max(0, Math.min(rt, w / 2, h / 2)); rb = Math.max(0, Math.min(rb, w / 2, h / 2));
+  return `M${x},${y + rt}a${rt},${rt} 0 0 1 ${rt},${-rt}h${w - 2 * rt}a${rt},${rt} 0 0 1 ${rt},${rt}v${h - rt - rb}a${rb},${rb} 0 0 1 ${-rb},${rb}h${-(w - 2 * rb)}a${rb},${rb} 0 0 1 ${-rb},${-rb}z`;
+}
+function drawChart() {
+  const host = $('#chart'); if (!host || !S._chart) return;
+  const { buckets, any } = S._chart, W = Math.max(280, Math.round(host.clientWidth)), H = 250, L = 48, R = 6, T = 14, B = 28;
+  const pw = W - L - R, ph = H - T - B;
+  let maxV = 0, minV = 0;
+  const sums = buckets.map(b => { let p = 0, n = 0; FLUX_ORDER.forEach(k => { const v = b.v[k] || 0; if (v > 0) p += v; else n += v; }); maxV = Math.max(maxV, p); minV = Math.min(minV, n); return { p, n }; });
+  if (maxV === 0 && minV === 0) maxV = 100;
+  const { lo, hi, ticks } = niceTicks(minV, maxV, 4), y = v => T + ((hi - v) / (hi - lo)) * ph;
+  const n = buckets.length, band = pw / n, bw = Math.max(2, Math.min(24, band * 0.62));
+  let g = '';
+  ticks.forEach(t => { const yy = Math.round(y(t)) + 0.5; g += `<line class="${t === 0 ? 'axis-l' : 'grid-l'}" x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}"/><text class="tick" x="${L - 8}" y="${yy}" text-anchor="end" dominant-baseline="middle">${esc(fmtCompact(t))}</text>`; });
+  let bars = '', hits = '', hl = '';
+  let best = -1, bestV = 0; sums.forEach((s, i) => { if (s.p > bestV) { bestV = s.p; best = i; } });
+  const every = Math.max(1, Math.ceil(n / Math.max(1, Math.floor(pw / 58))));
+  buckets.forEach((b, i) => {
+    const cx = L + band * i + band / 2, x = cx - bw / 2;
+    hl += `<rect class="hlr" data-i="${i}" x="${L + band * i}" y="${T}" width="${band}" height="${ph}"/>`;
+    const pos = FLUX_ORDER.filter(k => (b.v[k] || 0) > 0), neg = FLUX_ORDER.filter(k => (b.v[k] || 0) < 0);
+    let acc = 0;
+    pos.forEach((k, j) => { const v = b.v[k], y0 = y(acc), y1 = y(acc + v); acc += v; let h = y0 - y1 - (j > 0 ? 2 : 0); if (h < 1) h = 1; bars += `<path fill="var(--c-${k})" d="${barPath(x, y1, bw, h, j === pos.length - 1 ? 4 : 0, 0)}"/>`; });
+    acc = 0;
+    neg.forEach((k, j) => { const v = b.v[k], y0 = y(acc), y1 = y(acc + v); acc += v; let h = y1 - y0 - (j > 0 ? 2 : 0); if (h < 1) h = 1; bars += `<path fill="var(--c-${k})" d="${barPath(x, y0 + (j > 0 ? 2 : 0), bw, h, 0, j === neg.length - 1 ? 4 : 0)}"/>`; });
+    if ((i % every === 0 && (n - 1 - i) * band >= 52) || i === n - 1) bars += `<text class="tick" x="${cx}" y="${H - 8}" text-anchor="${i === n - 1 && n > 1 ? 'end' : 'middle'}"${i === n - 1 && n > 1 ? ` dx="${Math.min(band / 2, 14)}"` : ''}>${esc(b.label)}</text>`;
+    const tot = sums[i].p + sums[i].n;
+    hits += `<rect class="band" data-i="${i}" x="${L + band * i}" y="${T}" width="${band}" height="${ph}" tabindex="0" role="img" aria-label="${esc(b.title)} : ${esc(money(tot, 'USDT'))}"/>`;
+  });
+  if (best >= 0 && any) { const cx = L + band * best + band / 2; bars += `<text class="lab" x="${cx}" y="${y(bestV) - 7}" text-anchor="middle">${esc(fmt(bestV, 0))}</text>`; }
+  host.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-label="Marge nette par période et par flux">${g}${hl}${bars}${hits}</svg>${any ? '' : `<div class="chart-empty">Aucune marge enregistrée sur cette période.</div>`}<div class="tip" hidden></div>`;
+  const tip = $('.tip', host), svg = $('svg', host);
+  const show = (i, evx) => {
+    const b = buckets[i]; let tot = 0;
+    $$('.hlr', svg).forEach(r => r.classList.toggle('on', r.dataset.i === String(i)));
+    tip.innerHTML = `<div class="t-head">${esc(b.title)}</div>${FLUX_ORDER.map(k => { const v = b.v[k] || 0; tot += v; return `<div class="t-row"><i class="key" style="background:var(--c-${k})"></i><span>${esc(FLUX[k].short)}</span><b>${esc(money(v, 'USDT'))}</b></div>`; }).join('')}<div class="t-row tot"><i class="key"></i><span>Total</span><b>${esc(money(tot, 'USDT'))}</b></div>`;
+    tip.hidden = false;
+    const cx = L + band * i + band / 2, tw = tip.offsetWidth, hostW = host.clientWidth;
+    let left = (evx ?? cx) + 14; if (left + tw > hostW) left = (evx ?? cx) - tw - 14; if (left < 0) left = 0;
+    tip.style.left = left + 'px'; tip.style.top = '8px';
+  };
+  const hide = () => { tip.hidden = true; $$('.hlr', svg).forEach(r => r.classList.remove('on')); };
+  $$('.band', svg).forEach(r => {
+    r.addEventListener('pointermove', ev => { const box = host.getBoundingClientRect(); show(+r.dataset.i, ev.clientX - box.left); });
+    r.addEventListener('pointerleave', hide);
+    r.addEventListener('focus', () => show(+r.dataset.i));
+    r.addEventListener('blur', hide);
+  });
+}
+function chartTableHTML(cd) {
+  const rows = cd.buckets.filter(b => FLUX_ORDER.some(k => b.v[k]));
+  if (!rows.length) return `<p class="muted" style="margin:16px 0 0">Aucune marge enregistrée sur cette période.</p>`;
+  return `<div class="tbl-wrap" style="margin-top:12px"><table class="tbl compact"><thead><tr><th>Période</th>${FLUX_ORDER.map(k => `<th class="r">${esc(FLUX[k].short)}</th>`).join('')}<th class="r">Total</th></tr></thead><tbody>${rows.map(b => { let t = 0; return `<tr><td>${esc(b.title)}</td>${FLUX_ORDER.map(k => { const v = b.v[k] || 0; t += v; return `<td class="num r">${v ? money(v, 'USDT') : '<span class="none">—</span>'}</td>`; }).join('')}<td class="num r"><b>${money(t, 'USDT')}</b></td></tr>`; }).join('')}</tbody></table></div>`;
+}
+
+/* ===================== vue : opérations ===================== */
+function viewOps() {
+  const type = viewFlux(S.view);
+  const head = type
+    ? `<div class="page-head"><div><h1>${esc(FLUX[type].title())}</h1><p>${esc(FLUX[type].summary())}</p></div></div>`
+    : `<div class="page-head"><div><h1>Opérations</h1><p id="ops-count"></p></div></div>`;
+  return `${head}${modeBanner()}<div id="flux-head"></div>
+  <section class="card" style="margin-bottom:16px"><div class="toolbar">
+    <label class="search">${icon('search')}<span class="sr">Rechercher</span><input id="q" type="search" placeholder="Client, référence, note…" value="${esc(S.q)}" autocomplete="off"></label>
+    <div class="seg" role="group" aria-label="Statut">${[['all', 'Toutes'], ['open', 'En cours'], ['closed', 'Clôturées']].map(([k, l]) => `<button type="button" data-act="status" data-status="${k}" aria-pressed="${S.status === k}">${l}</button>`).join('')}</div>
+    <span class="spacer"></span>${periodSeg('j', S.jPeriod)}
+  </div></section>
+  <section class="card" id="ops-area"></section>`;
+}
+function filteredOps() {
+  const type = viewFlux(S.view), P = periodInfo(S.jPeriod), q = S.q.trim().toLowerCase();
+  let list = S.ops.filter(o => FLUX[o.type] && (!type || o.type === type) && inRange(o, P.from, P.to)).map(enrich);
+  if (S.status !== 'all') list = list.filter(e => (S.status === 'open' ? !e.p.closed : e.p.closed));
+  if (q) list = list.filter(e => [e.op.client, e.op.ref, e.op.note, e.op.inputs?.bankRef, e.op.inputs?.partner, e.op.inputs?.country, e.op.inputs?.currency, FLUX[e.op.type].short].some(s => String(s || '').toLowerCase().includes(q)));
+  const { key, dir } = S.sort, m = dir === 'asc' ? 1 : -1;
+  const kf = { date: e => e.op.date + (e.op.createdAt || ''), client: e => (e.op.client || '').toLowerCase(), vol: e => (e.r ? e.r.volumeUsdt : -Infinity), net: e => (e.r ? e.r.netUsdt : -Infinity), status: e => (e.p.closed ? 1 : 0) }[key] || (e => e.op.date);
+  list.sort((a, b) => { const x = kf(a), y = kf(b); return (x < y ? -1 : x > y ? 1 : 0) * m; });
+  return list;
+}
+function renderOpsArea() {
+  const area = $('#ops-area'); if (!area) return;
+  const type = viewFlux(S.view), list = filteredOps();
+  const cnt = $('#ops-count');
+  if (cnt) { const all = S.ops.length, open = S.ops.filter(o => !progress(o).closed).length; cnt.textContent = `${plural(all, 'opération', 'opérations')} · ${fmt(open)} en cours`; }
+  const fh = $('#flux-head'); if (fh) fh.innerHTML = type ? fluxHeadHTML(type) : '';
+  if (S.mode === 'live' && !S.opsLoaded) { area.innerHTML = emptyBlock('clock', 'Chargement des opérations…', 'Les opérations enregistrées apparaissent dans un instant.'); return; }
+  if (!list.length) {
+    const none = !S.ops.some(o => !type || o.type === type);
+    area.innerHTML = none
+      ? emptyBlock(type ? FLUX[type].icon : 'scroll-text', 'Aucune opération enregistrée', type ? `Saisissez la première opération ${FLUX[type].short} : les montants, la marge et les étapes à suivre se calculent pendant la saisie.` : "Saisissez une opération pour suivre ses étapes, sa marge et les commissions dues. Le simulateur permet de tester un scénario avant de l'engager.", S.readOnly ? '' : `<button class="btn btn-primary" data-act="new-op"${type ? ` data-type="${type}"` : ''}>${icon('plus')}Nouvelle opération</button><a class="btn btn-soft" href="#simulateur">${icon('calculator')}Ouvrir le simulateur</a>`)
+      : emptyBlock('search', 'Aucun résultat', 'Aucune opération ne correspond à la recherche ou aux filtres choisis.');
+    return;
+  }
+  area.innerHTML = opsTableHTML(list, type) + opsCardsHTML(list, type);
+}
+function sortTh(key, label, cls = '') {
+  const on = S.sort.key === key;
+  return `<th class="sortable${on ? ' on' : ''}${cls ? ' ' + cls : ''}" aria-sort="${on ? (S.sort.dir === 'asc' ? 'ascending' : 'descending') : 'none'}"><button type="button" data-act="sort" data-key="${key}">${esc(label)}${icon('chevrons-up-down')}</button></th>`;
+}
+function extraCol(type) {
+  if (type === 'nous') return { h: 'Spread', td: e => `${fmt(e.r.spread, 3, 4)}${NB}AED<small>${fmtPct(e.r.spread / e.op.inputs.rateMarket)}</small>` };
+  if (type === 'mali') return { h: 'Couverture', td: e => { const rk = riskOf('mali', e.op.inputs); return `${riskPill(rk)}<small>coussin ${isFinite(rk.be) ? fmtPct(rk.be) : '> 50 %'}</small>`; } };
+  if (type === 'local') return { h: 'Versé au client', td: e => `${money(e.r.payout.amount, e.r.payout.cur)}<small>${esc(e.r.payout.partner)}${e.r.payout.country ? ' · ' + esc(e.r.payout.country) : ''}</small>` };
+  if (type === 'doudou' || type === 'congo') return { h: 'Commission', td: e => (e.r.commission ? `${money(e.r.commission.amount, e.r.commission.cur)}<small>${e.op.steps?.comm ? 'versée' : 'à verser'} · ${esc(pname(e.r.commission.partner))}</small>` : '<span class="none">Aucune</span>') };
+  return null;
+}
+function opsTableHTML(list, type) {
+  const ex = type ? extraCol(type) : null;
+  const rows = list.map(e => {
+    const { op, r, p } = e;
+    return `<tr data-row="${esc(op.id)}">
+      <td class="num">${fdate(op.date)}</td>
+      <td class="c-client"><button type="button" class="link" data-act="open-op" data-id="${esc(op.id)}">${op.client ? esc(op.client) : '<span class="none">Sans nom</span>'}</button><small>${esc(op.ref || '')}</small></td>
+      ${type ? '' : `<td>${fluxBadge(op.type)}</td>`}
+      <td class="num r">${r ? money(r.volumeUsdt, 'USDT', { d: 0 }) : '—'}${op.type === 'mali' ? `<small>${money(op.inputs.aed, 'AED', { d: 0 })}</small>` : ''}${type && r ? `<small>à ${fmtRate(r.clientRate.value, r.clientRate.unit)}</small>` : ''}</td>
+      <td class="num r"><b class="${signCls(r ? r.netUsdt : 0)}">${r ? money(r.netUsdt, 'USDT', { sign: true }) : '—'}</b><small>${r ? fmtPct(r.marginPct) : ''}</small></td>
+      ${ex ? `<td class="num">${r ? ex.td(e) : '—'}</td>` : ''}
+      <td class="c-next">${statusCell(p)}</td>
+      <td class="c-act"><button class="btn btn-soft btn-sm hide-md" data-act="open-op" data-id="${esc(op.id)}">${icon('file-text')}Détail</button>${!p.closed && !S.readOnly ? `<button class="btn btn-primary btn-sm" data-act="next-step" data-id="${esc(op.id)}" title="Valider : ${esc(p.next.l)}">${icon('check')}Valider</button>` : ''}</td>
+    </tr>`;
+  }).join('');
+  return `<div class="tbl-wrap tbl-ops"><table class="tbl"><thead><tr>${sortTh('date', 'Date')}${sortTh('client', 'Client')}${type ? '' : '<th>Flux</th>'}${sortTh('vol', 'Volume', 'r')}${sortTh('net', 'Marge nette', 'r')}${ex ? `<th>${esc(ex.h)}</th>` : ''}${sortTh('status', 'Prochaine action')}<th><span class="sr">Actions</span></th></tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+function opsCardsHTML(list) {
+  return `<div class="op-list">${list.map(({ op, r, p }) => `<div class="op-card">
+    <div class="oc-top">${fluxBadge(op.type)}<span class="ref">${esc(op.ref || '')}</span>${p.closed ? `<span class="pill pill-green">${icon('circle-check')}Clôturée</span>` : `<span class="pill pill-amber">${p.done}/${p.total}</span>`}</div>
+    <div class="oc-mid"><div><b>${op.client ? esc(op.client) : '<span class="none">Sans nom</span>'}</b><small class="cell-sub">${fdate(op.date)} · ${r ? money(r.volumeUsdt, 'USDT', { d: 0 }) : '—'}</small>${p.closed ? '' : `<small class="cell-sub todo">${esc(p.next.todo)}</small>`}</div><div class="r"><b class="${signCls(r ? r.netUsdt : 0)}">${r ? money(r.netUsdt, 'USDT', { sign: true }) : '—'}</b><small class="cell-sub">${r ? fmtPct(r.marginPct) : ''}</small></div></div>
+    <div class="oc-act"><button class="btn btn-soft btn-sm" data-act="open-op" data-id="${esc(op.id)}">${icon('file-text')}Détail</button>${!p.closed && !S.readOnly ? `<button class="btn btn-primary btn-sm" data-act="next-step" data-id="${esc(op.id)}">${icon('check')}Valider l'étape</button>` : ''}</div>
+  </div>`).join('')}</div>`;
+}
+function fluxHeadHTML(type) {
+  const P = periodInfo(S.jPeriod), list = S.ops.filter(o => o.type === type && inRange(o, P.from, P.to)).map(enrich), t = totals(list);
+  const tiles = [kpiHTML('coins', 'Volume', fmt(t.vol, 0), 'USDT', `<span>${plural(t.n, 'opération', 'opérations')} · ${esc(P.s === 'Tout' ? 'depuis le début' : P.l.toLowerCase())}</span>`), kpiHTML('trending-up', 'Marge nette', fmt(t.net, 2), 'USDT', t.vol ? `<span>${fmtPct(t.net / t.vol)} du volume</span>` : '<span>—</span>')];
+  if (type === 'nous') {
+    const q = list.reduce((a, e) => a + (e.r ? e.op.inputs.usdt : 0), 0), sp = list.reduce((a, e) => a + (e.r ? e.r.spread * e.op.inputs.usdt : 0), 0);
+    tiles.push(kpiHTML('arrow-left-right', 'Spread moyen', q ? fmtRate(sp / q, 'AED/USDT', false) : '—', 'AED/USDT', `<span>Spread cible : ${fmtRate(S.config.margins.nousSpread, 'AED/USDT')}</span>`));
+    const aed = list.reduce((a, e) => a + (e.r ? e.op.inputs.usdt * e.op.inputs.rateClient : 0), 0);
+    tiles.push(kpiHTML('wallet', `AED remis à ${pname('nous')}`, fmt(aed, 0), 'AED', '<span>sur la période</span>'));
+  } else if (type === 'doudou') {
+    const due = commissionsDue(S.ops.filter(o => o.type === 'doudou').map(enrich));
+    const all = {}; Object.values(due).forEach(p => Object.entries(p.byCur).forEach(([c, v]) => { all[c] = (all[c] || 0) + v; }));
+    tiles.push(kpiHTML('hand-coins', 'Commissions à verser', esc(Object.keys(all).length ? curMix(all) : '0 XAF'), '', '<span>toutes périodes</span>'));
+    const gnf = list.filter(e => e.op.inputs.currency === 'GNF').reduce((a, e) => a + (e.r ? e.r.volumeUsdt : 0), 0);
+    tiles.push(kpiHTML('coins', 'Part payée en GNF', t.vol ? fmtPct(gnf / t.vol, 0) : '—', '', `<span>${money(gnf, 'USDT', { d: 0 })} sur ${money(t.vol, 'USDT', { d: 0 })}</span>`));
+  } else if (type === 'congo') {
+    const allC = S.ops.filter(o => o.type === 'congo').map(enrich), xaf = allC.reduce((a, e) => a + (e.r ? e.r.receipt.amount : 0), 0), cap = S.config.congoCapital || 0;
+    tiles.push(kpiHTML('refresh-cw', 'Tours du capital', cap ? fmt(xaf / cap, 1, 1) : '—', cap ? 'tour' + (xaf / cap >= 2 ? 's' : '') : '', `<span>${money(xaf, 'XAF')} encaissés sur ${money(cap, 'XAF')} engagés</span>`));
+    const due = commissionsDue(allC), z = due.zoer;
+    const rule = S.config.commissions.zoer;
+    tiles.push(kpiHTML('hand-coins', `Commission ${pname('zoer')}`, esc(curMix(z && z.byCur)), '', rule && rule.max > 0 ? '<span>provisionnée, non versée</span>' : '<span>Taux à définir dans Paramètres</span>'));
+  } else if (type === 'local') {
+    const toP = list.reduce((a, e) => a + (e.r ? e.r.payout.usdt : 0), 0), byCur = {};
+    list.forEach(e => { if (e.r) byCur[e.r.payout.cur] = (byCur[e.r.payout.cur] || 0) + e.r.payout.amount; });
+    tiles.push(kpiHTML('coins', 'USDT vendus aux partenaires', fmt(toP, 0), 'USDT', '<span>sur la période</span>'));
+    tiles.push(kpiHTML('globe', 'Versé aux clients', esc(curMix(byCur, normCur(S.config.local.currency))), '', '<span>sur la période</span>'));
+  } else if (type === 'mali') {
+    const th = (S.config.risk.maxMove || 1) / 100; let under = 0, wsum = 0, w = 0;
+    list.forEach(e => { if (!e.r) return; const rk = riskOf('mali', e.op.inputs); if (rk.status !== 'ok') under++; if (isFinite(rk.be)) { wsum += rk.be * e.r.volumeUsdt; w += e.r.volumeUsdt; } });
+    tiles.push(kpiHTML('shield-check', 'Coussin moyen', w ? fmtPct(wsum / w) : '—', '', `<span>seuil : variation de ${fmtPct(th, 1)}</span>`));
+    tiles.push(kpiHTML('triangle-alert', 'Sous le seuil', fmt(under), '', under ? '<span>opérations à surveiller</span>' : '<span>Toutes les opérations sont couvertes</span>'));
+  }
+  return `<section class="card" style="margin-bottom:16px"><div class="card-head"><h3>Schéma du flux</h3><span class="sub">les étapes se valident dans chaque opération</span></div><div class="card-body">${flowHTML(type)}</div></section><div class="kpis" style="margin-bottom:16px">${tiles.join('')}</div>`;
+}
+
+/* ===================== vue : simulateur ===================== */
+function simDraft() {
+  const t = S.sim.type;
+  if (!S.sim.drafts[t]) S.sim.drafts[t] = { type: t, vals: { ...FLUX[t].defaults(S.config) }, manual: {}, errs: {} };
+  const d = S.sim.drafts[t]; d.type = t; d.errs = d.errs || {}; d.manual = d.manual || {}; return d;
+}
+function viewSim() {
+  const d = simDraft();
+  return `<div class="page-head"><div><h1>Simulateur</h1><p>Testez une opération avec les taux du jour avant de l'engager. Rien n'est enregistré tant que vous ne cliquez pas sur « Enregistrer comme opération ».</p></div></div>
+  ${typePicker('sim', d.type)}
+  <div class="sim">
+    <section class="card"><div class="card-head"><h3>Paramètres</h3><button class="btn btn-ghost btn-sm" data-act="sim-reset" title="Revenir aux taux et montants par défaut">${icon('refresh-cw')}Réinitialiser</button></div>
+      <div class="card-body"><p class="muted" style="margin:0 0 14px">${esc(FLUX[d.type].summary())}</p><div class="form" id="sim-fields">${fieldsHTML('sim', d)}</div></div></section>
+    <div class="stack" id="sim-out">${simOutHTML()}</div>
+  </div>`;
+}
+function simOutHTML() {
+  const d = simDraft(), errs = validate(d.type, d);
+  if (Object.keys(errs).length) return `<section class="card">${emptyBlock('calculator', 'Complétez les paramètres', 'Le résultat se calcule dès que les montants et les taux sont renseignés.')}</section>`;
+  const v = resolve(d.type, d), r = compute(d.type, v); if (!r) return '';
+  const rk = riskOf(d.type, v), loss = r.netUsdt < 0;
+  return `<section class="card"><div class="hero-res">
+      <div><div class="lbl">Marge nette estimée</div><div class="big ${loss ? 'neg' : ''}">${fmt(r.netUsdt, 2)}<small>USDT</small></div>
+      <div class="meta"><span class="pill ${loss ? 'pill-red' : 'pill-teal'}">${fmtPct(r.marginPct)} du volume</span>${r.native.cur !== 'USDT' ? `<span class="pill">${money(r.native.net, r.native.cur, { sign: true })}</span>` : ''}${r.commission ? `<span class="pill">Commission ${esc(pname(r.commission.partner))} : ${money(r.commission.amount, r.commission.cur)}</span>` : ''}${d.type === 'mali' ? riskPill(rk) : ''}</div></div>
+      ${d.type === 'mali' ? riskMeter(rk) : ''}
+      ${S.readOnly ? '' : `<button class="btn btn-primary" data-act="sim-save">${icon('plus')}Enregistrer comme opération</button>`}
+    </div>${r.ijar ? `<div class="card-foot">Face à Ijar (${fmtRate(r.ijar.rate, 'XAF/USDT')}), le client économise <b>${money(r.ijar.saving, 'XAF')}</b>.</div>` : ''}</section>
+  <div class="grid g-2" style="margin-top:0">
+    <section class="card"><div class="card-head"><h3>Chaîne d'opérations</h3><span class="sub">${plural(r.legs.length, 'étape', 'étapes')}</span></div><div class="card-body">${legsHTML(r)}</div></section>
+    <section class="card"><div class="card-head"><h3>Compte de résultat</h3></div><div class="card-body">${plHTML(r)}</div></section>
+  </div>
+  <section class="card"><div class="card-head"><h3>Sensibilité au taux</h3><span class="sub">${esc(FLUX[d.type].sens(v).label)}</span></div><div class="tbl-wrap">${sensHTML(d.type, v, rk)}</div></section>`;
+}
+function sensHTML(type, v, rk) {
+  const sens = FLUX[type].sens(v), th = rk.th, steps = [0, 0.0025, 0.005, 0.01, 0.015, 0.02];
+  if (!steps.includes(th)) { steps.push(th); steps.sort((a, b) => a - b); }
+  const vol = compute(type, v).volumeUsdt;
+  const rows = steps.map(s => {
+    const x = { ...v, [sens.key]: v[sens.key] * (1 + sens.dir * s) }, r = compute(type, x); if (!r) return '';
+    const isTh = Math.abs(s - th) < 1e-9;
+    return `<tr${isTh ? ' class="thr"' : ''}><td>${s === 0 ? 'Taux saisis' : `${sens.dir > 0 ? '+' : '−'}${fmtPct(s)}`}${isTh ? ' <span class="muted">· variation max. observée</span>' : ''}</td><td class="num r">${fmtRate(x[sens.key], fieldDefs(type, v).find(f => f.key === sens.key).unit)}</td><td class="num r"><b class="${signCls(r.netUsdt)}">${money(r.netUsdt, 'USDT', { sign: true })}</b></td><td class="num r">${fmtPct(r.netUsdt / vol)}</td><td>${r.netUsdt > 0.004 ? `<span class="pill pill-green">${icon('circle-check')}Bénéfice</span>` : `<span class="pill pill-red">${icon('octagon-x')}Perte</span>`}</td></tr>`;
+  }).join('');
+  const be = rk.be, beRate = isFinite(be) ? v[sens.key] * (1 + sens.dir * be) : null, unit = fieldDefs(type, v).find(f => f.key === sens.key).unit;
+  return `<table class="tbl compact sens"><thead><tr><th>Variation défavorable</th><th class="r">Taux</th><th class="r">Marge nette</th><th class="r">Marge</th><th>Résultat</th></tr></thead><tbody>${rows}</tbody></table><div class="card-foot">${be > 0 ? (isFinite(be) ? `Point mort à <b>${sens.dir > 0 ? '+' : '−'}${fmtPct(be)}</b>, soit ${fmtRate(beRate, unit)}.` : 'Point mort au-delà de 50 % de variation.') : 'L’opération est déjà à perte avec les taux saisis.'}</div>`;
+}
+let simSaveT;
+function saveSimLater() { clearTimeout(simSaveT); simSaveT = setTimeout(() => LS.set('sim', { type: S.sim.type, drafts: S.sim.drafts }), 400); }
+
+/* ===================== vue : partenaires ===================== */
+function viewPartners() {
+  const all = S.ops.map(enrich).filter(e => e.r), due = commissionsDue(all);
+  const sum = (arr, f) => arr.reduce((a, e) => a + f(e), 0);
+  const nous = all.filter(e => e.op.type === 'nous'), gnfNous = all.filter(e => e.op.type === 'doudou' && e.op.inputs.currency === 'GNF' && e.op.inputs.receipt === 'Nous');
+  const kaOps = all.filter(e => e.op.type === 'congo' || e.op.type === 'mali' || (e.op.type === 'doudou' && e.op.inputs.currency !== 'GNF'));
+  const kaU = sum(kaOps, e => (e.op.type === 'mali' ? e.r.flows.usdt : e.op.inputs.usdt)), kaX = sum(kaOps, e => (e.op.type === 'mali' ? e.r.flows.xaf : e.op.inputs.usdt * e.op.inputs.rateCost));
+  const mali = all.filter(e => e.op.type === 'mali'), xof = sum(mali, e => e.r.flows.xof), xafMe = sum(mali, e => e.r.flows.xaf);
+  const app = id => all.filter(e => e.op.inputs.apporteur === id);
+  const paidOf = id => { const acc = {}; all.forEach(e => { const c = e.r.commission; if (c && c.partner === id && e.op.steps?.comm) acc[c.cur] = (acc[c.cur] || 0) + c.amount; }); return acc; };
+  const card = (id, ic, rows, foot = '') => `<section class="card pcard"><div class="pc-head"><span class="pc-av">${icon(ic)}</span><div><h3>${esc(pname(id))}</h3><small>${esc(S.config.partners[id]?.role || '')}</small></div></div><div class="card-body"><dl class="kv">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}</dl></div>${foot ? `<div class="pc-foot">${foot}</div>` : ''}</section>`;
+  const payFoot = id => {
+    const d = due[id];
+    if (!d) return `<span class="muted">Aucune commission à verser.</span>`;
+    if (S.readOnly) return `<span class="muted">${plural(d.n, 'commission', 'commissions')} à verser.</span>`;
+    if (S.confirm && S.confirm.kind === 'pay' && S.confirm.id === id) return `<div class="confirm"><p>Marquer ${plural(d.n, 'commission', 'commissions')} (${esc(curMix(d.byCur))}) comme versées aujourd'hui ?</p><button class="btn btn-ghost btn-sm" data-act="confirm-cancel">Annuler</button><button class="btn btn-primary btn-sm" data-act="pay-confirm" data-id="${id}">${icon('check')}Confirmer</button></div>`;
+    return `<button class="btn btn-primary btn-sm" data-act="pay" data-id="${id}">${icon('check')}Marquer comme versées</button><span class="muted">${plural(d.n, 'opération', 'opérations')}</span>`;
+  };
+  const zr = S.config.commissions.zoer, cap = S.config.congoCapital || 0, congoX = sum(all.filter(e => e.op.type === 'congo'), e => e.r.receipt.amount);
+  const doudouOps = app('doudou'), zoerOps = app('zoer');
+  const lkey = n => String(n || '').trim().toLowerCase(), locG = new Map(), defLP = String(S.config.local.partner || '').trim();
+  if (defLP) locG.set(lkey(defLP), { name: defLP, ops: [] });
+  all.filter(e => e.op.type === 'local').forEach(e => { const n = e.r.payout.partner, k = lkey(n); if (!locG.has(k)) locG.set(k, { name: n, ops: [] }); locG.get(k).ops.push(e); });
+  const localCards = [...locG.values()].map(g => {
+    const byCur = {}, countries = new Set();
+    g.ops.forEach(e => { byCur[e.r.payout.cur] = (byCur[e.r.payout.cur] || 0) + e.r.payout.amount; if (e.r.payout.country) countries.add(e.r.payout.country); });
+    const usdt = sum(g.ops, e => e.r.payout.usdt), net = sum(g.ops, e => e.r.netUsdt), curs = Object.keys(byCur);
+    const rows = [['USDT achetés', money(usdt, 'USDT', { d: 0 })], ['Versé aux clients', esc(curMix(byCur, normCur(S.config.local.currency)))], ['Marge réalisée', `<span class="${signCls(net)}">${money(net, 'USDT', { sign: true })}</span>`]];
+    rows.push(curs.length === 1 && usdt ? ['Taux moyen', fmtRate((byCur[curs[0]] / usdt) * 100, localUnit(curs[0], 100))] : ['Opérations', fmt(g.ops.length)]);
+    return `<section class="card pcard"><div class="pc-head"><span class="pc-av">${icon('globe')}</span><div><h3>${esc(g.name)}</h3><small>Paiement local · ${esc([...countries].join(', ') || S.config.local.country)}</small></div></div><div class="card-body"><dl class="kv">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}</dl></div></section>`;
+  }).join('');
+  return `<div class="page-head"><div><h1>Partenaires</h1><p>Volumes échangés et commissions par contrepartie, depuis le début. Les noms se modifient dans Paramètres.</p></div></div>
+  ${modeBanner()}
+  <div class="pcards">
+    ${card('nous', 'arrow-left-right', [['USDT reçus', money(sum(nous, e => e.op.inputs.usdt), 'USDT', { d: 0 })], ['AED remis', money(sum(nous, e => e.op.inputs.usdt * e.op.inputs.rateClient), 'AED', { d: 0 })], ['Marge réalisée', `<span class="${signCls(sum(nous, e => e.r.netUsdt))}">${money(sum(nous, e => e.r.netUsdt), 'USDT', { sign: true })}</span>`], ['GNF reçus pour nos ventes', `${money(sum(gnfNous, e => e.r.receipt.amount), 'GNF')}<small>${plural(gnfNous.length, 'paiement', 'paiements')} de clients ${esc(pname('doudou'))}</small>`]])}
+    ${card('doudou', 'hand-coins', [['USDT vendus', money(sum(doudouOps, e => e.op.inputs.usdt), 'USDT', { d: 0 })], ['Commissions à verser', esc(curMix(due.doudou && due.doudou.byCur))], ['Commissions versées', esc(curMix(paidOf('doudou')))], ['Règle XAF', `${fmt(S.config.commissions.doudouXaf.priority, 0, 2)} pour nous d'abord<small>puis jusqu'à ${fmt(S.config.commissions.doudouXaf.max, 0, 2)} XAF par USDT</small>`]], payFoot('doudou'))}
+    ${card('zoer', 'send', [['USDT envoyés', money(sum(zoerOps, e => e.op.inputs.usdt), 'USDT', { d: 0 })], ['Tours du capital', `${cap ? fmt(congoX / cap, 1, 1) : '—'}<small>${money(congoX, 'XAF')} encaissés sur ${money(cap, 'XAF')}</small>`], ['Commission provisionnée', esc(curMix(due.zoer && due.zoer.byCur))], ['Taux de commission', zr.max > 0 ? `${fmt(zr.max, 0, 2)} XAF par USDT` : '<span class="pill pill-amber">À définir</span>']], payFoot('zoer'))}
+    ${card('ka', 'wallet', [['USDT achetés', money(kaU, 'USDT', { d: 0 })], ['XAF payés', money(kaX, 'XAF')], ['Prix moyen', kaU ? fmtRate(kaX / kaU, 'XAF/USDT') : '—'], ['Prix du jour', fmtRate(S.config.rates.xafKa, 'XAF/USDT')]])}
+    ${card('me', 'route', [['XOF vendus', money(xof, 'XOF')], ['XAF reçus', money(xafMe, 'XAF')], ['Taux moyen', xof ? fmtRate(xafMe / xof, 'XAF/XOF') : '—'], ['Opérations Mali', fmt(mali.length)]])}
+    ${localCards}
+  </div>`;
+}
+
+/* ===================== vue : fonds SBI ===================== */
+function viewSbi() {
+  const P = periodInfo(S.sbiPeriod), all = S.ops.filter(isSbi).map(enrich).filter(e => e.r);
+  const list = all.filter(e => inRange(e.op, P.from, P.to)).sort((a, b) => (a.op.date < b.op.date ? 1 : -1));
+  const amt = list.reduce((a, e) => a + e.r.receipt.amount, 0), todo = list.filter(e => !e.op.reconciled), noRef = list.filter(e => !e.op.inputs.bankRef).length;
+  const months = new Map();
+  all.forEach(e => { const k = e.op.date.slice(0, 7); const m = months.get(k) || { n: 0, amt: 0, ok: 0 }; m.n++; m.amt += e.r.receipt.amount; if (e.op.reconciled) m.ok += e.r.receipt.amount; months.set(k, m); });
+  const mrows = [...months.entries()].sort((a, b) => (a[0] < b[0] ? 1 : -1)).slice(0, 12);
+  return `<div class="page-head"><div><h1>Fonds reçus sur les comptes SBI</h1><p>Virements XAF de clients encaissés sur les comptes SBI pour le compte des opérations de change.</p></div><div class="actions">${periodSeg('sbi', S.sbiPeriod)}${Store.dl ? `<button class="btn btn-line" data-act="export-sbi"${list.length ? '' : ' disabled'}>${icon('download')}Exporter le relevé</button>` : ''}</div></div>
+  ${modeBanner()}
+  <div class="callout">${icon('info')}<div><b>Point ouvert depuis la réunion du 28 oct. 2026.</b> Ces fonds de tiers entrent aujourd'hui dans la comptabilité propre de SBI. Ce relevé les isole, avec la référence du virement et l'état du rapprochement, pour le reporting interne en attendant la solution comptable.</div></div>
+  <div class="kpis">
+    ${kpiHTML('landmark', 'Reçus sur la période', fmt(amt, 0), 'XAF', `<span>${plural(list.length, 'encaissement', 'encaissements')}</span>`)}
+    ${kpiHTML('circle-check', 'Rapprochés', fmt(list.length - todo.length), '', `<span>${money(amt - todo.reduce((a, e) => a + e.r.receipt.amount, 0), 'XAF')}</span>`)}
+    ${kpiHTML('clock', 'À rapprocher', fmt(todo.length), '', `<span>${money(todo.reduce((a, e) => a + e.r.receipt.amount, 0), 'XAF')}</span>`)}
+    ${kpiHTML('triangle-alert', 'Sans référence de virement', fmt(noRef), '', noRef ? '<span>à compléter dans les opérations</span>' : '<span>Toutes les références sont saisies</span>')}
+  </div>
+  <div class="grid">
+    <section class="card"><div class="card-head"><h3>Encaissements</h3><span class="sub">${esc(P.l)}</span></div>
+      ${list.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Date</th><th>Client</th><th>Flux</th><th class="r">Montant</th><th>Réf. virement</th><th>Rapprochement</th></tr></thead><tbody>${list.map(e => `<tr><td class="num">${fdate(e.op.date)}</td><td class="c-client"><b>${e.op.client ? esc(e.op.client) : '<span class="none">Sans nom</span>'}</b><small><button class="auto-reset" data-act="open-op" data-id="${esc(e.op.id)}">${esc(e.op.ref || 'Ouvrir')}</button></small></td><td>${fluxBadge(e.op.type)}</td><td class="num r"><b>${money(e.r.receipt.amount, 'XAF')}</b></td><td>${e.op.inputs.bankRef ? esc(e.op.inputs.bankRef) : '<span class="none">Non saisie</span>'}</td><td>${S.readOnly ? (e.op.reconciled ? `<span class="pill pill-green">${icon('circle-check')}Rapproché</span>` : '<span class="pill pill-amber">À rapprocher</span>') : `<button class="btn btn-sm ${e.op.reconciled ? 'btn-soft' : 'btn-line'}" data-act="reconcile" data-id="${esc(e.op.id)}" aria-pressed="${!!e.op.reconciled}">${icon(e.op.reconciled ? 'circle-check' : 'circle')}${e.op.reconciled ? 'Rapproché' : 'À rapprocher'}</button>`}</td></tr>`).join('')}</tbody></table></div>`
+      : emptyBlock('landmark', 'Aucun encaissement sur SBI', "Les ventes USDT payées en XAF et les transferts Congo encaissés sur le compte SBI apparaissent ici automatiquement.")}
+    </section>
+    <section class="card"><div class="card-head"><h3>Par mois</h3><span class="sub">toutes périodes</span></div>
+      ${mrows.length ? `<div class="tbl-wrap"><table class="tbl compact"><thead><tr><th>Mois</th><th class="r">Montant</th><th class="r">Rapproché</th></tr></thead><tbody>${mrows.map(([k, m]) => `<tr><td>${esc(DFML.format(fromISO(k + '-01')))}<small>${plural(m.n, 'encaissement', 'encaissements')}</small></td><td class="num r">${money(m.amt, 'XAF')}</td><td class="num r">${fmtPct(m.amt ? m.ok / m.amt : 0, 0)}</td></tr>`).join('')}</tbody></table></div>` : `<div class="card-body"><p class="muted" style="margin:0">Le récapitulatif mensuel se remplit avec les encaissements.</p></div>`}
+    </section>
+  </div>`;
+}
+async function exportSbi() {
+  if (!Store.dl) return;
+  const P = periodInfo(S.sbiPeriod), list = S.ops.filter(isSbi).map(enrich).filter(e => e.r && inRange(e.op, P.from, P.to)).sort((a, b) => (a.op.date < b.op.date ? -1 : 1));
+  const cell = x => { const s = String(x ?? ''); return /[;"\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
+  const lines = [['Date', 'Référence', 'Flux', 'Client', 'Montant XAF', 'Référence virement', 'Rapproché']].concat(list.map(e => [e.op.date, e.op.ref, FLUX[e.op.type].short, e.op.client, Math.round(e.r.receipt.amount), e.op.inputs.bankRef || '', e.op.reconciled ? 'oui' : 'non']));
+  try {
+    await Store.dl.save({ filename: `fonds-sbi-${todayISO()}.csv`, data: '﻿' + lines.map(r => r.map(cell).join(';')).join('\r\n') });
+    toast('Relevé exporté.');
+  } catch (e) { if (!e || e.code !== 'declined') toast("L'export n'a pas pu être enregistré sur cet appareil.", 'error'); }
+}
+
+/* ===================== vue : utilisateurs ===================== */
+function viewUsers() {
+  const admin = isAdmin() && !S.readOnly, mem = currentMember(), E = S.memberEdit;
+  const loading = S.mode === 'live' && !S.membersLoaded;
+  const rows = [...S.members].sort((a, b) => String(a.name).localeCompare(String(b.name), 'fr'));
+  const adminsN = S.members.filter(m => m.role === 'admin').length;
+  const canClaim = S.mode === 'live' && !S.readOnly && !mem && !!S.me.id;
+  const activity = id => { let n = 0, last = ''; S.ops.forEach(o => { const m = memberOf(o.createdBy, o.createdByMember); if (m && m.id === id) { n++; if ((o.createdAt || '') > last) last = o.createdAt; } }); return { n, last }; };
+  const table = rows.length ? `<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nom</th><th>Adresse e-mail</th><th>Rôle</th><th>Accès</th><th>Activité</th><th><span class="sr">Actions</span></th></tr></thead><tbody>${rows.map(m => {
+      const a = activity(m.id), mine = mem && mem.id === m.id, ini = String(m.name || '?').split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+      const lastAdmin = m.role === 'admin' && adminsN <= 1;
+      let actions = '';
+      if (S.confirm && S.confirm.kind === 'user-del' && S.confirm.id === m.id) actions = `<span class="muted">Retirer cette fiche ?</span><button class="btn btn-ghost btn-sm" data-act="confirm-cancel">Annuler</button><button class="btn btn-danger btn-sm" data-act="user-del-confirm" data-id="${esc(m.id)}">${icon('trash-2')}Retirer</button>`;
+      else {
+        if (canClaim) actions += `<button class="btn btn-soft btn-sm" data-act="user-claim" data-id="${esc(m.id)}">${icon('user-check')}C'est moi</button>`;
+        if (admin) actions += `<button class="btn btn-soft btn-sm" data-act="user-edit" data-id="${esc(m.id)}">${icon('pencil')}Modifier</button><button class="btn btn-danger-ghost btn-sm" data-act="user-del" data-id="${esc(m.id)}"${lastAdmin ? ' disabled title="Gardez au moins un administrateur."' : ''}>${icon('trash-2')}Retirer</button>`;
+      }
+      return `<tr><td><div class="who"><span class="mini-av">${esc(ini)}</span><b>${esc(m.name)}</b>${mine ? '<span class="pill pill-teal">Vous</span>' : ''}</div></td><td><span class="mail">${esc(m.email)}</span></td><td>${m.role === 'admin' ? `<span class="pill pill-teal">${icon('shield-check')}${ROLES.admin}</span>` : `<span class="pill">${ROLES.operateur}</span>`}</td><td>${(m.uids || []).length ? `<span class="pill pill-green">${icon('circle-check')}Compte relié</span>` : '<span class="pill pill-amber">Pas encore connecté</span>'}</td><td>${a.n ? `${plural(a.n, 'opération saisie', 'opérations saisies')}<small>dernière le ${esc(fstamp(a.last))}</small>` : '<span class="none">Aucune saisie</span>'}</td><td class="c-act">${actions}</td></tr>`;
+    }).join('')}</tbody></table></div><div class="card-foot">${ROLES.admin} : opérations, paramètres et utilisateurs. ${ROLES.operateur} : opérations et validation des étapes.</div>`
+    : loading ? emptyBlock('clock', 'Chargement des utilisateurs…', 'Les fiches enregistrées apparaissent dans un instant.')
+    : emptyBlock('user-plus', 'Aucun utilisateur', "Ajoutez une fiche par personne : nom, adresse e-mail et rôle. À sa première visite, la personne choisit sa fiche et ses saisies portent ensuite son nom.", admin && !E ? `<button class="btn btn-primary" data-act="user-new">${icon('user-plus')}Ajouter un utilisateur</button>` : '');
+  return `<div class="page-head"><div><h1>Utilisateurs</h1><p>${loading ? 'Chargement…' : plural(rows.length, 'utilisateur', 'utilisateurs')} · chaque fiche donne un nom et un rôle dans l'application à une personne invitée.</p></div>${admin && !E ? `<div class="actions"><button class="btn btn-primary" data-act="user-new">${icon('user-plus')}Ajouter un utilisateur</button></div>` : ''}</div>
+  ${modeBanner()}
+  <div class="callout">${icon('info')}<div><b>La fiche ne donne pas l'accès à elle seule.</b> Pour qu'une personne ouvre l'application, invitez son adresse dans le menu Partager de cette page sur claude.ai, au niveau Éditeur. À sa première visite, elle choisit sa fiche (« C'est moi ») : ses saisies portent ensuite son nom.</div></div>
+  ${E ? memberFormHTML(E) : ''}
+  <section class="card">${table}</section>`;
+}
+function memberFormHTML(E) {
+  const errs = E.errs || {};
+  const f = (key, label, ctl) => `<div class="field${errs[key] ? ' err' : ''}"><div class="field-top"><label for="um-${key}">${esc(label)}</label></div>${ctl}${errs[key] ? `<div class="errmsg">${esc(errs[key])}</div>` : ''}</div>`;
+  return `<section class="card" style="margin-bottom:16px"><div class="card-head"><h3>${E.id ? 'Modifier la fiche' : 'Nouvel utilisateur'}</h3></div><div class="card-body"><div class="form form-3">
+    ${f('name', 'Nom', `<div class="inp"><input id="um-name" value="${esc(E.name || '')}" autocomplete="off" placeholder="Prénom NOM"></div>`)}
+    ${f('email', 'Adresse e-mail', `<div class="inp"><input id="um-email" type="email" inputmode="email" value="${esc(E.email || '')}" autocomplete="off" placeholder="nom@altinus.pro"></div>`)}
+    ${f('role', 'Rôle', `<div class="inp"><select id="um-role"><option value="operateur"${E.role !== 'admin' ? ' selected' : ''}>${ROLES.operateur}</option><option value="admin"${E.role === 'admin' ? ' selected' : ''}>${ROLES.admin}</option></select></div>`)}
+  </div><div class="save-row"><span class="note">Invitez aussi cette adresse dans le menu Partager de claude.ai.</span><button class="btn btn-ghost" data-act="user-cancel">Annuler</button><button class="btn btn-primary" data-act="user-save">${icon('check')}Enregistrer</button></div></div></section>`;
+}
+async function saveMember() {
+  const E = S.memberEdit; if (!E || E.busy) return;
+  E.name = $('#um-name').value.trim(); E.email = $('#um-email').value.trim().toLowerCase(); E.role = $('#um-role').value === 'admin' ? 'admin' : 'operateur';
+  const errs = {}, cur = E.id ? S.members.find(m => m.id === E.id) : null;
+  if (!E.name) errs.name = 'Indiquez un nom.';
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(E.email)) errs.email = 'Adresse e-mail invalide.';
+  else if (S.members.some(m => m.id !== E.id && (m.email || '').toLowerCase() === E.email)) errs.email = 'Cette adresse a déjà une fiche.';
+  if (cur && cur.role === 'admin' && E.role !== 'admin' && !S.members.some(m => m.id !== E.id && m.role === 'admin')) errs.role = 'Gardez au moins un administrateur.';
+  E.errs = errs;
+  if (Object.keys(errs).length) { renderView(); const el = $('.field.err input, .field.err select'); if (el) el.focus(); return; }
+  const now = new Date().toISOString();
+  const body = { name: E.name, email: E.email, role: E.role, uids: cur && cur.uids ? cur.uids.slice() : [], createdAt: (cur && cur.createdAt) || now, createdBy: cur ? (cur.createdBy ?? null) : (S.me.id || null), updatedAt: now };
+  E.busy = true;
+  try { await Store.saveMember(E.id, body); S.memberEdit = null; renderView(); toast(cur ? 'Fiche mise à jour.' : `Fiche créée pour ${E.name}. Invitez ${E.email} dans le menu Partager.`); }
+  catch (e) { E.busy = false; writeFailed(e); }
+}
+
+/* ===================== vue : paramètres ===================== */
+const setRO = () => S.readOnly || !isAdmin();
+function setNum(form, path, unit, max = 4, label = '') {
+  const v = getPath(S.config, path), ro = setRO();
+  return `<div class="inp"${ro ? ' aria-disabled="true"' : ''}><input id="${form}-${path.replace(/\./g, '-')}" data-form="${form}" data-path="${path}" inputmode="decimal" autocomplete="off" value="${esc(fmtInput(v, max))}"${label ? ` aria-label="${esc(label)}"` : ''}${ro ? ' disabled' : ''}><span class="unit">${esc(unit)}</span></div>`;
+}
+function setText(form, path, label, help) {
+  const id = `${form}-${path.replace(/\./g, '-')}`, ro = setRO();
+  return `<div class="field"><div class="field-top"><label for="${id}">${esc(label)}</label></div><div class="inp"${ro ? ' aria-disabled="true"' : ''}><input id="${id}" data-form="${form}" data-path="${path}" data-kind="text" value="${esc(getPath(S.config, path) ?? '')}" autocomplete="off"${ro ? ' disabled' : ''}></div>${help ? `<div class="help">${esc(help)}</div>` : ''}</div>`;
+}
+function setSelect(form, path, label, options) {
+  const id = `${form}-${path.replace(/\./g, '-')}`, ro = setRO(), cur = String(getPath(S.config, path));
+  return `<div class="field"><div class="field-top"><label for="${id}">${esc(label)}</label></div><div class="inp"${ro ? ' aria-disabled="true"' : ''}><select id="${id}" data-form="${form}" data-path="${path}" data-kind="num"${ro ? ' disabled' : ''}>${options.map(([k, l]) => `<option value="${esc(k)}"${k === cur ? ' selected' : ''}>${esc(l)}</option>`).join('')}</select></div></div>`;
+}
+function setField(form, path, label, unit, help, max) {
+  const id = `${form}-${path.replace(/\./g, '-')}`;
+  return `<div class="field"><div class="field-top"><label for="${id}">${esc(label)}</label></div>${setNum(form, path, unit, max)}${help ? `<div class="help">${esc(help)}</div>` : ''}</div>`;
+}
+function saveRow(form, note = '') { return setRO() ? '' : `<div class="save-row"><span class="note">${esc(note)}</span><button class="btn btn-primary" data-act="save-set" data-form="${form}">${icon('check')}Enregistrer</button></div>`; }
+function viewSettings() {
+  const c = S.config;
+  return `<div class="page-head"><div><h1>Paramètres</h1><p>Taux du jour, marges, règles de commission, corridors et partenaires. Les changements s'appliquent au simulateur et aux nouvelles opérations ; les opérations déjà saisies gardent leurs taux.</p></div></div>
+  ${modeBanner()}${!S.readOnly && !isAdmin() ? `<div class="callout">${icon('info')}<div><b>Consultation seule.</b> Seuls les administrateurs modifient les paramètres. Votre rôle : ${esc(ROLES[(currentMember() || {}).role] || 'compte non relié')}.</div></div>` : ''}
+  <section class="card"><div class="card-head"><h3>Taux du jour</h3><span class="sub">valeurs utilisées par défaut</span></div><div class="card-body">
+    ${RATE_DEFS.map(r => { const m = c.ratesMeta?.[r.key]; return `<div class="set-row"><div class="lab"><b>${esc(val(r.label))}</b><small>${esc(val(r.unit))}</small></div>${setNum('set-rates', 'rates.' + r.key, val(r.unit), 4, val(r.label))}<div class="meta">${m && m.at ? `Mis à jour ${esc(fstamp(m.at))}${m.by || m.byMember ? ' par ' + esc(who(m.by, m.byMember)) : ''}` : r.src ? esc(r.src) : '<span class="pill pill-amber">Indicatif, à mettre à jour</span>'}</div></div>`; }).join('')}
+    ${saveRow('set-rates', 'Les taux marqués « Indicatif » sont des valeurs de départ, pas des cotations.')}
+  </div></section>
+  <div class="grid g-2">
+    <section class="card"><div class="card-head"><h3>Marges</h3></div><div class="card-body"><div class="form">
+      ${setField('set-margins', 'margins.nousSpread', `Spread accordé à ${pname('nous')}`, 'AED/USDT', 'Taux Nous = taux marché − spread (3,665 → 3,660).', 4)}
+      ${setField('set-margins', 'margins.doudouXaf', 'Marge ventes USDT en XAF', 'XAF/USDT', 'Entre 2 et 3 XAF par USDT.', 2)}
+      ${setField('set-margins', 'margins.doudouGnf', 'Marge ventes USDT en GNF', 'GNF/USDT', 'Marge fixe de 100 GNF par USDT.', 0)}
+      ${setField('set-margins', 'margins.congoXaf', 'Marge transferts Congo', 'XAF/USDT', 'Ajoutée au prix d’achat chez KA.', 2)}
+      ${setField('set-margins', 'margins.localSpread', `Spread paiement local (${normCur(c.local.currency)})`, localUnit(normCur(c.local.currency), c.local.base), `Taux client = taux ${c.local.partner} − spread : 2\u202f404 − 94 = 2\u202f310 dans l'opération du 29 oct.`, 4)}
+    </div>${saveRow('set-margins')}</div></section>
+    <section class="card"><div class="card-head"><h3>Commissions des apporteurs</h3></div><div class="card-body"><div class="form">
+      ${setField('set-comm', 'commissions.doudouXaf.priority', `${pname('doudou')} XAF : part prioritaire pour nous`, 'XAF/USDT', '', 2)}
+      ${setField('set-comm', 'commissions.doudouXaf.max', `${pname('doudou')} XAF : commission max.`, 'XAF/USDT', 'Avec 3 XAF de marge : 2 pour nous, 1 pour Doudou.', 2)}
+      ${setField('set-comm', 'commissions.doudouGnf.priority', `${pname('doudou')} GNF : part prioritaire`, 'GNF/USDT', '', 0)}
+      ${setField('set-comm', 'commissions.doudouGnf.max', `${pname('doudou')} GNF : commission max.`, 'GNF/USDT', 'Non précisée en réunion.', 0)}
+      ${setField('set-comm', 'commissions.zoer.priority', `${pname('zoer')} : part prioritaire`, 'XAF/USDT', '', 2)}
+      ${setField('set-comm', 'commissions.zoer.max', `${pname('zoer')} : commission max.`, 'XAF/USDT', 'Aucune commission versée à ce jour.', 2)}
+    </div>${saveRow('set-comm', 'Commission = marge par USDT − part prioritaire, plafonnée au maximum.')}</div></section>
+  </div>
+  <div class="grid g-2">
+    <section class="card"><div class="card-head"><h3>Risque et capital</h3></div><div class="card-body"><div class="form">
+      ${setField('set-risk', 'risk.maxMove', 'Variation maximale observée', '%', 'Seuil de couverture du corridor Mali → Dubaï.', 2)}
+      ${setField('set-risk', 'congoCapital', 'Capital engagé sur le Congo', 'XAF', 'Sert à compter les tours de capital.', 0)}
+    </div>${saveRow('set-risk')}</div></section>
+    <section class="card"><div class="card-head"><h3>Paiement en devise locale</h3><span class="sub">valeurs proposées par défaut</span></div><div class="card-body"><div class="form">
+      ${setText('set-local', 'local.currency', 'Devise', 'Code de la devise versée au client, par ex. SLE.')}
+      ${setText('set-local', 'local.country', 'Pays', '')}
+      ${setText('set-local', 'local.partner', 'Partenaire local', 'Achète les USDT et dépose la devise chez le client.')}
+      ${setSelect('set-local', 'local.base', 'Taux exprimés', [['100', 'pour 100 USDT'], ['1', 'pour 1 USDT']])}
+    </div>${saveRow('set-local')}</div></section>
+  </div>
+  <section class="card" style="margin-top:16px"><div class="card-head"><h3>Corridors</h3></div><div class="card-body">
+      ${CORRIDORS.map(([k, n]) => { const co = c.corridors[k] || {}; return `<div class="corr-row"><b>${esc(n)}</b><div class="inp"><select data-form="set-corr" data-path="corridors.${k}.status" aria-label="Statut ${esc(n)}"${setRO() ? ' disabled' : ''}><option value="actif"${co.status !== 'pause' ? ' selected' : ''}>Actif</option><option value="pause"${co.status === 'pause' ? ' selected' : ''}>En pause</option></select></div><div class="inp"><input data-form="set-corr" data-path="corridors.${k}.note" value="${esc(co.note || '')}" aria-label="Note ${esc(n)}"${setRO() ? ' disabled' : ''}></div></div>`; }).join('')}
+      ${saveRow('set-corr')}
+  </div></section>
+  <section class="card" style="margin-top:16px"><div class="card-head"><h3>Partenaires</h3><span class="sub">nom affiché et rôle</span></div><div class="card-body">
+    ${PARTNER_IDS.map(id => { const p = c.partners[id] || {}; return `<div class="part-row"><span class="muted">${esc(DEFAULT_CONFIG.partners[id].name)}</span><div class="inp"><input data-form="set-part" data-path="partners.${id}.name" value="${esc(p.name || '')}" aria-label="Nom affiché pour ${esc(DEFAULT_CONFIG.partners[id].name)}"${setRO() ? ' disabled' : ''}></div><div class="inp"><input data-form="set-part" data-path="partners.${id}.role" value="${esc(p.role || '')}" aria-label="Rôle de ${esc(DEFAULT_CONFIG.partners[id].name)}"${setRO() ? ' disabled' : ''}></div></div>`; }).join('')}
+    ${saveRow('set-part')}
+  </div></section>`;
+}
+async function saveSettings(form) {
+  const patch = {}; let bad = null;
+  for (const el of $$(`[data-form="${form}"][data-path]`)) {
+    const path = el.dataset.path, kind = el.dataset.kind || (el.tagName === 'SELECT' || /\.(note|name|role|status)$/.test(path) ? 'text' : 'num'), isText = kind === 'text';
+    let v = isText ? el.value.trim() : parseNum(el.value);
+    if (isText && /\.currency$/.test(path)) v = normCur(v);
+    if (!isText && !(isFinite(v) && v >= 0)) { bad = el; break; }
+    if (isText && /\.(name|currency|partner)$/.test(path) && !v) { bad = el; break; }
+    if (!isText && path === 'rates.' + path.split('.')[1] && !(v > 0)) { bad = el; break; }
+    if (getPath(S.config, path) !== v) {
+      setPath(patch, path, v);
+      if (path.startsWith('rates.')) setPath(patch, 'ratesMeta.' + path.slice(6), { at: new Date().toISOString(), by: S.me.id || null, byMember: myRef() });
+    }
+  }
+  if (bad) { bad.focus(); toast(/\.(name|currency|partner)$/.test(bad.dataset.path) ? 'Ce champ ne peut pas être vide.' : 'Vérifiez la valeur saisie : un nombre positif est attendu.', 'error'); return; }
+  if (!Object.keys(patch).length) { toast('Aucun changement à enregistrer.'); S.dirty[form] = false; return; }
+  try { await Store.saveConfig(patch); S.dirty[form] = false; toast('Paramètres enregistrés.'); renderChrome(); if (!Object.values(S.dirty).some(Boolean)) renderView(); }
+  catch (e) { writeFailed(e); }
+}
+
+/* ===================== panneau opération ===================== */
+const findOp = id => S.ops.find(o => o.id === id);
+function makeRef(type, date) {
+  const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let r = '';
+  for (let i = 0; i < 4; i++) r += A[Math.floor(Math.random() * A.length)];
+  return `${FLUX[type].prefix}-${date.slice(2, 4)}${date.slice(5, 7)}${date.slice(8, 10)}-${r}`;
+}
+function openCreate(type, vals, manual) {
+  const t = FLUX[type] ? type : LS.get('lastType', 'nous');
+  S.drawer = { mode: 'create', d: newDraft(t, vals, manual) }; S.confirm = null;
+  renderDrawer(true);
+}
+function renderDrawer(focus) {
+  const wrap = $('#drawer'), D = S.drawer;
+  document.body.classList.toggle('dr-open', !!D);
+  if (!D) { wrap.hidden = true; wrap.innerHTML = ''; document.body.style.overflow = ''; return; }
+  let html = '';
+  if (D.mode === 'view') {
+    const op = findOp(D.id);
+    if (!op) { S.drawer = null; return renderDrawer(); }
+    html = drawerViewHTML(op);
+  } else html = drawerFormHTML(D);
+  const keepScroll = $('.dr-body', wrap)?.scrollTop || 0, same = wrap.dataset.key === (D.mode + (D.id || '')), opening = wrap.hidden;
+  wrap.innerHTML = `<div class="drawer-bg" data-act="drawer-close"></div><section class="drawer${opening ? ' anim' : ''}" role="dialog" aria-modal="true" aria-labelledby="dr-title">${html}</section>`;
+  wrap.dataset.key = D.mode + (D.id || '');
+  wrap.hidden = false; document.body.style.overflow = 'hidden';
+  if (same && !focus) { const b = $('.dr-body', wrap); if (b) b.scrollTop = keepScroll; }
+  if (focus) { const f = $('.drawer input:not([type=checkbox]), .drawer .icon-btn', wrap); if (f) f.focus({ preventScroll: true }); }
+}
+function drawerViewHTML(op) {
+  const r = opResult(op), p = progress(op), steps = opSteps(op), F = FLUX[op.type];
+  const rk = op.type === 'mali' && r ? riskOf('mali', op.inputs) : null;
+  const confirmDel = S.confirm && S.confirm.kind === 'del' && S.confirm.id === op.id;
+  const info = [['Date', fdate(op.date)], ['Référence', esc(op.ref || '—')]];
+  if (op.inputs.apporteur !== undefined) info.push(['Apporteur', op.inputs.apporteur ? esc(pname(op.inputs.apporteur)) : 'Aucun']);
+  if (r && r.receipt) info.push(["Compte d'encaissement", `${esc(receiptLabel(op.inputs.receipt, r.receipt.cur))}${op.inputs.bankRef ? `<small>Réf. ${esc(op.inputs.bankRef)}</small>` : ''}`]);
+  if (isSbi(op)) info.push(['Rapprochement SBI', op.reconciled ? 'Rapproché' : 'À rapprocher']);
+  info.push(['Saisie', `${esc(fstamp(op.createdAt))}<small>par ${esc(who(op.createdBy, op.createdByMember))}</small>`]);
+  if (op.updatedAt && op.updatedAt !== op.createdAt) info.push(['Dernière modification', `${esc(fstamp(op.updatedAt))}<small>par ${esc(who(op.updatedBy, op.updatedByMember))}</small>`]);
+  return `<header class="dr-head"><div class="grow"><div class="dr-kicker">${fluxBadge(op.type)}<span class="ref">${esc(op.ref || '')}</span></div><h2 id="dr-title">${esc(op.client || F.short)}</h2><div class="dr-sub">${fdate(op.date)} · ${p.closed ? 'Clôturée' : `Étape ${p.done + 1} sur ${p.total}`}</div></div><button class="icon-btn" data-act="drawer-close" aria-label="Fermer">${icon('x')}</button></header>
+  <div class="dr-body">
+    ${r ? `<div class="res-mini"><div><div class="lbl">Marge nette</div><div class="big ${signCls(r.netUsdt)}">${money(r.netUsdt, 'USDT', { sign: true })}</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill pill-teal">${fmtPct(r.marginPct)}</span>${r.native.cur !== 'USDT' ? `<span class="pill">${money(r.native.net, r.native.cur, { sign: true })}</span>` : ''}${rk ? riskPill(rk) : ''}</div></div>` : `<div class="callout amber">${icon('triangle-alert')}<div>Les montants de cette opération sont incomplets : ouvrez « Modifier » pour les corriger.</div></div>`}
+    <div class="dr-sec"><h4>Étapes</h4>${progressBar(p)}<div class="steps" style="margin-top:8px">${steps.map(s => { const done = !!op.steps?.[s.k], at = op.stepsAt?.[s.k]; return `<label class="step${done ? ' done' : ''}"><input type="checkbox" data-act-change="step" data-id="${esc(op.id)}" data-k="${s.k}"${done ? ' checked' : ''}${S.readOnly ? ' disabled' : ''}><span class="txt">${esc(done ? s.l : s.todo)}</span>${done && at ? `<span class="when">${esc(fstamp(at))}${op.stepsBy && op.stepsBy[s.k] ? ' · ' + esc(who(op.stepsBy[s.k], op.stepsBy[s.k])) : ''}</span>` : ''}</label>`; }).join('')}</div></div>
+    ${r ? `<div class="dr-sec"><h4>Chaîne d'opérations</h4>${legsHTML(r)}</div><div class="dr-sec"><h4>Compte de résultat</h4>${plHTML(r)}</div>` : ''}
+    ${op.note ? `<div class="dr-sec"><h4>Note</h4><p style="margin:0;white-space:pre-wrap">${esc(op.note)}</p></div>` : ''}
+    <div class="dr-sec"><h4>Informations</h4><dl class="kv">${info.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}</dl></div>
+  </div>
+  <footer class="dr-foot">${S.readOnly ? '<span class="muted">Lecture seule</span>' : confirmDel
+    ? `<div class="confirm"><p>Supprimer définitivement ${esc(op.ref || 'cette opération')} ?</p><button class="btn btn-ghost" data-act="confirm-cancel">Annuler</button><button class="btn btn-danger" data-act="del-confirm" data-id="${esc(op.id)}">${icon('trash-2')}Supprimer</button></div>`
+    : `<button class="btn btn-danger-ghost" data-act="del" data-id="${esc(op.id)}" aria-label="Supprimer">${icon('trash-2')}<span class="hide-s">Supprimer</span></button><span class="spacer"></span><button class="btn btn-line" data-act="dup" data-id="${esc(op.id)}">${icon('copy')}Dupliquer</button><button class="btn btn-soft" data-act="edit" data-id="${esc(op.id)}">${icon('pencil')}Modifier</button>`}</footer>`;
+}
+function drawerFormHTML(D) {
+  const d = D.d, F = FLUX[d.type], errs = d.errs || {};
+  const title = D.mode === 'create' ? 'Nouvelle opération' : `Modifier ${findOp(D.id)?.ref || ''}`;
+  return `<header class="dr-head"><div class="grow"><div class="dr-kicker">${fluxBadge(d.type)}</div><h2 id="dr-title">${esc(title)}</h2><div class="dr-sub">${esc(F.summary())}</div></div><button class="icon-btn" data-act="drawer-close" aria-label="Fermer">${icon('x')}</button></header>
+  <div class="dr-body">
+    ${D.mode === 'create' ? `<div class="dr-sec"><h4>Type d'opération</h4>${typePicker('dr', d.type)}</div>` : ''}
+    <div id="dr-live">${drawerLiveHTML(d)}</div>
+    <div class="form">
+      <div class="field${errs.date ? ' err' : ''}"><div class="field-top"><label for="dr-date">Date</label></div><div class="inp"><input type="date" id="dr-date" data-form="dr" data-key="date" value="${esc(d.date)}"></div>${errs.date ? `<div class="errmsg">${esc(errs.date)}</div>` : ''}</div>
+      <div class="field"><div class="field-top"><label for="dr-client">${esc(F.clientLabel)}</label></div><div class="inp"><input id="dr-client" data-form="dr" data-key="client" value="${esc(d.client)}" autocomplete="off" placeholder="Facultatif"></div></div>
+    </div>
+    <div class="form" id="dr-fields">${fieldsHTML('dr', d)}</div>
+    <div class="field"><div class="field-top"><label for="dr-note">Note interne</label></div><textarea class="ta" id="dr-note" data-form="dr" data-key="note" placeholder="Contexte, conditions négociées, contact…">${esc(d.note)}</textarea></div>
+    <div id="dr-detail">${drawerDetailHTML(d)}</div>
+  </div>
+  <footer class="dr-foot"><span class="spacer"></span><button class="btn btn-ghost" data-act="drawer-cancel">Annuler</button><button class="btn btn-primary" data-act="drawer-save">${icon('check')}${D.mode === 'create' ? "Enregistrer l'opération" : 'Enregistrer les modifications'}</button></footer>`;
+}
+function drawerLiveHTML(d) {
+  const errs = validate(d.type, d); delete errs.date;
+  if (Object.keys(errs).length) return `<div class="res-mini"><div><div class="lbl">Marge nette</div><div class="big muted">—</div></div><span class="muted">Complétez les montants et les taux.</span></div>`;
+  const v = resolve(d.type, d), r = compute(d.type, v); if (!r) return '';
+  const rk = d.type === 'mali' ? riskOf('mali', v) : null;
+  return `<div class="res-mini"><div><div class="lbl">Marge nette estimée</div><div class="big ${signCls(r.netUsdt)}">${money(r.netUsdt, 'USDT', { sign: true })}</div></div><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill pill-teal">${fmtPct(r.marginPct)}</span>${r.native.cur !== 'USDT' ? `<span class="pill">${money(r.native.net, r.native.cur, { sign: true })}</span>` : ''}${rk ? riskPill(rk) : ''}</div></div>`;
+}
+function drawerDetailHTML(d) {
+  const errs = validate(d.type, d); delete errs.date;
+  if (Object.keys(errs).length) return '';
+  const r = compute(d.type, resolve(d.type, d)); if (!r) return '';
+  return `<div class="dr-sec"><h4>Chaîne d'opérations</h4>${legsHTML(r)}</div><div class="dr-sec" style="margin-top:20px"><h4>Compte de résultat</h4>${plHTML(r)}</div>`;
+}
+async function saveDrawer() {
+  const D = S.drawer; if (!D || D.mode === 'view' || D.busy) return;
+  const d = D.d; d.errs = validate(d.type, d);
+  if (Object.keys(d.errs).length) {
+    renderDrawer();
+    const first = $('.drawer .field.err input, .drawer .field.err select'); if (first) first.focus();
+    return;
+  }
+  const inputs = resolve(d.type, d), now = new Date().toISOString();
+  D.busy = true;
+  try {
+    if (D.mode === 'create') {
+      const body = { type: d.type, date: d.date, ref: makeRef(d.type, d.date), client: d.client.trim(), note: d.note.trim(), inputs, steps: {}, stepsAt: {}, reconciled: false, createdBy: S.me.id || null, createdByMember: myRef(), createdAt: now, updatedBy: S.me.id || null, updatedByMember: myRef(), updatedAt: now };
+      const id = await Store.addOp(body);
+      LS.set('lastType', d.type);
+      S.drawer = { mode: 'view', id }; renderDrawer(true);
+      toast(`Opération ${body.ref} enregistrée.`);
+    } else {
+      const cur = findOp(D.id); if (!cur) { S.drawer = null; renderDrawer(); return; }
+      const { id, ...rest } = cur;
+      const body = { ...clone(rest), date: d.date, client: d.client.trim(), note: d.note.trim(), inputs, ...stamp() };
+      await Store.setOp(D.id, body);
+      S.drawer = { mode: 'view', id: D.id }; renderDrawer(true);
+      toast('Modifications enregistrées.');
+    }
+  } catch (e) { D.busy = false; writeFailed(e); }
+}
+async function toggleStep(id, k, on) {
+  const now = new Date().toISOString();
+  try { await Store.patchOp(id, { steps: { [k]: on }, stepsAt: { [k]: on ? now : null }, stepsBy: { [k]: on ? (myRef() || S.me.id || null) : null }, ...stamp() }); }
+  catch (e) { writeFailed(e); refresh(); }
+}
+async function nextStep(id) {
+  const op = findOp(id); if (!op) return;
+  const p = progress(op); if (!p.next) return;
+  await toggleStep(id, p.next.k, true);
+  toast(`Étape validée : ${p.next.l}.`);
+}
+
+/* ===================== mises à jour ===================== */
+function isFormView() { return S.view === 'simulateur' || S.view === 'parametres' || (S.view === 'utilisateurs' && !!S.memberEdit); }
+function onData(kind) {
+  renderChrome();
+  if (S.view === 'simulateur') { if (kind === 'config') refreshAutos('sim'); }
+  else if (S.view === 'parametres') { if (!Object.values(S.dirty).some(Boolean)) renderView(); }
+  else if (S.view === 'utilisateurs') { if (!S.memberEdit) renderView(); }
+  else if (S.view === 'operations' || viewFlux(S.view)) renderOpsArea();
+  else renderView();
+  if (S.drawer) {
+    if (S.drawer.mode === 'view') renderDrawer();
+    else if (kind === 'config') refreshAutos('dr');
+  }
+  resolveNames();
+}
+function refresh() { onData(); }
+function renderView() {
+  const el = $('#view');
+  const v = S.view;
+  if (v === 'tableau-de-bord') el.innerHTML = viewDashboard();
+  else if (v === 'simulateur') el.innerHTML = viewSim();
+  else if (v === 'operations' || viewFlux(v)) { el.innerHTML = viewOps(); renderOpsArea(); }
+  else if (v === 'partenaires') el.innerHTML = viewPartners();
+  else if (v === 'fonds-sbi') el.innerHTML = viewSbi();
+  else if (v === 'parametres') el.innerHTML = viewSettings();
+  else if (v === 'utilisateurs') el.innerHTML = viewUsers();
+  if (v === 'tableau-de-bord' && !S.chartTable) drawChart();
+}
+function setView(v) {
+  if (!VIEWS[v]) v = 'tableau-de-bord';
+  const changed = S.view !== v;
+  S.view = v; S.confirm = null; S.dirty = {}; S.memberEdit = null;
+  document.body.classList.remove('sb-open');
+  renderChrome(); renderView();
+  if (changed) { window.scrollTo(0, 0); $('#view').focus({ preventScroll: true }); }
+}
+const draftOf = form => (form === 'sim' ? simDraft() : S.drawer && S.drawer.d);
+function refreshAutos(form) {
+  const d = draftOf(form); if (!d) return;
+  const v = resolve(d.type, d);
+  for (const f of fieldDefs(d.type, d.vals)) {
+    if (!f.auto || d.manual[f.key]) continue;
+    const el = document.getElementById(`${form}-${f.key}`); if (!el || el === document.activeElement) continue;
+    el.value = (f.type || 'num') === 'num' ? fmtInput(v[f.key], f.max) : (v[f.key] ?? '');
+    const fe = el.closest('.field'), h = fe && !fe.classList.contains('err') && fe.querySelector('.help'); if (h) h.outerHTML = helpHTML(form, f, d, v, null);
+  }
+  liveResults(form);
+}
+function liveResults(form) {
+  if (form === 'sim') { const out = $('#sim-out'); if (out) out.innerHTML = simOutHTML(); saveSimLater(); }
+  else { const d = draftOf('dr'); if (!d) return; const a = $('#dr-live'), b = $('#dr-detail'); if (a) a.innerHTML = drawerLiveHTML(d); if (b) b.innerHTML = drawerDetailHTML(d); }
+}
+function rerenderFields(form) {
+  const d = draftOf(form); if (!d) return;
+  const box = $(form === 'sim' ? '#sim-fields' : '#dr-fields'); if (!box) return;
+  const active = document.activeElement && document.activeElement.id;
+  box.innerHTML = fieldsHTML(form, d);
+  if (active) { const el = document.getElementById(active); if (el) el.focus({ preventScroll: true }); }
+  liveResults(form);
+}
+
+/* ===================== notifications ===================== */
+let toastT;
+function toast(msg, kind = 'ok') {
+  const el = $('#toast');
+  el.innerHTML = `<span class="t-ic ${kind === 'error' ? 'error' : ''}">${icon(kind === 'error' ? 'triangle-alert' : 'circle-check')}</span><div class="t-msg">${esc(msg)}</div><button class="icon-btn" data-act="toast-close" aria-label="Fermer la notification">${icon('x')}</button>`;
+  el.hidden = false; clearTimeout(toastT);
+  toastT = setTimeout(() => { el.hidden = true; }, kind === 'error' ? 7000 : 3500);
+}
+
+/* ===================== événements ===================== */
+document.addEventListener('click', async e => {
+  if (e.target.closest('.nav-item')) document.body.classList.remove('sb-open');
+  const a = e.target.closest('[data-act]');
+  if (!a) { const row = e.target.closest('tr[data-row]'); if (row && !getSelection().toString()) { S.drawer = { mode: 'view', id: row.dataset.row }; S.confirm = null; renderDrawer(true); } return; }
+  const act = a.dataset.act, id = a.dataset.id;
+  switch (act) {
+    case 'sb-toggle':
+      if (matchMedia('(max-width: 900px)').matches) document.body.classList.toggle('sb-open');
+      else { document.body.classList.toggle('sb-collapsed'); LS.set('sbCollapsed', document.body.classList.contains('sb-collapsed')); if (S.view === 'tableau-de-bord') setTimeout(drawChart, 200); }
+      break;
+    case 'sb-close': document.body.classList.remove('sb-open'); break;
+    case 'new-op': if (!S.readOnly) openCreate(a.dataset.type || viewFlux(S.view) || (S.view === 'simulateur' ? S.sim.type : null)); break;
+    case 'open-op': S.drawer = { mode: 'view', id }; S.confirm = null; renderDrawer(true); break;
+    case 'next-step': a.disabled = true; await nextStep(id); break;
+    case 'drawer-close': case 'drawer-cancel':
+      if (S.drawer && S.drawer.mode === 'edit' && act === 'drawer-cancel') { S.drawer = { mode: 'view', id: S.drawer.id }; renderDrawer(true); }
+      else { S.drawer = null; S.confirm = null; renderDrawer(); }
+      break;
+    case 'drawer-save': await saveDrawer(); break;
+    case 'edit': { const op = findOp(id); if (!op) break; const manual = {}; Object.keys(op.inputs || {}).forEach(k => { manual[k] = true; }); S.drawer = { mode: 'edit', id, d: { type: op.type, date: op.date, client: op.client || '', note: op.note || '', vals: clone(op.inputs || {}), manual, errs: {} } }; renderDrawer(true); break; }
+    case 'dup': { const op = findOp(id); if (!op) break; const manual = {}; Object.keys(op.inputs || {}).forEach(k => { manual[k] = true; }); S.drawer = { mode: 'create', d: { ...newDraft(op.type, clone(op.inputs || {}), manual), client: op.client || '' } }; renderDrawer(true); break; }
+    case 'del': S.confirm = { kind: 'del', id }; renderDrawer(); break;
+    case 'del-confirm': { const op = findOp(id); try { await Store.deleteOp(id); S.drawer = null; S.confirm = null; renderDrawer(); toast(`Opération ${op ? op.ref : ''} supprimée.`); } catch (err) { writeFailed(err); } break; }
+    case 'confirm-cancel': S.confirm = null; if (S.drawer) renderDrawer(); else renderView(); break;
+    case 'pick-type': {
+      const form = a.dataset.form, t = a.dataset.type;
+      if (form === 'sim') { S.sim.type = t; saveSimLater(); renderView(); }
+      else if (S.drawer && S.drawer.mode === 'create') { const old = S.drawer.d; S.drawer.d = { ...newDraft(t), date: old.date, client: old.client, note: old.note }; renderDrawer(); }
+      break;
+    }
+    case 'seg': {
+      const form = a.dataset.form, d = draftOf(form); if (!d) break;
+      d.vals[a.dataset.key] = a.dataset.value;
+      if (a.dataset.key === 'currency') ['rateCost', 'rateClient', 'commissionRate', 'receipt'].forEach(k => { delete d.manual[k]; delete d.vals[k]; });
+      if (a.dataset.key === 'base') ['rateProvider', 'rateClient'].forEach(k => { delete d.manual[k]; delete d.vals[k]; });
+      rerenderFields(form); break;
+    }
+    case 'reset-auto': { const form = a.dataset.form, d = draftOf(form); if (!d) break; delete d.manual[a.dataset.key]; delete d.vals[a.dataset.key]; rerenderFields(form); break; }
+    case 'sim-reset': S.sim.drafts[S.sim.type] = null; saveSimLater(); renderView(); break;
+    case 'sim-save': { const d = simDraft(); openCreate(d.type, clone(d.vals), clone(d.manual)); break; }
+    case 'period': {
+      const sc = a.dataset.scope, k = a.dataset.period;
+      if (sc === 'dash') { S.dashPeriod = k; LS.set('dashPeriod', k); renderView(); }
+      else if (sc === 'j') { S.jPeriod = k; $$('[data-scope="j"]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.period === k))); renderOpsArea(); }
+      else if (sc === 'sbi') { S.sbiPeriod = k; renderView(); }
+      break;
+    }
+    case 'status': S.status = a.dataset.status; $$('[data-act="status"]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.status === S.status))); renderOpsArea(); break;
+    case 'sort': { const k = a.dataset.key; S.sort = S.sort.key === k ? { key: k, dir: S.sort.dir === 'asc' ? 'desc' : 'asc' } : { key: k, dir: k === 'client' || k === 'status' ? 'asc' : 'desc' }; renderOpsArea(); break; }
+    case 'chart-table': S.chartTable = !S.chartTable; renderView(); break;
+    case 'pay': S.confirm = { kind: 'pay', id }; renderView(); break;
+    case 'pay-confirm': {
+      const now = new Date().toISOString();
+      const targets = S.ops.map(enrich).filter(e => e.r && e.r.commission && e.r.commission.partner === id && !e.op.steps?.comm);
+      S.confirm = null;
+      try { for (const e of targets) await Store.patchOp(e.op.id, { steps: { comm: true }, stepsAt: { comm: now }, stepsBy: { comm: myRef() || S.me.id || null }, ...stamp() }); toast(`${plural(targets.length, 'commission marquée', 'commissions marquées')} comme versée${targets.length > 1 ? 's' : ''} à ${pname(id)}.`); }
+      catch (err) { writeFailed(err); }
+      renderView(); break;
+    }
+    case 'reconcile': { const op = findOp(id); if (!op) break; try { await Store.patchOp(id, { reconciled: !op.reconciled, reconciledAt: !op.reconciled ? new Date().toISOString() : null, ...stamp() }); } catch (err) { writeFailed(err); } break; }
+    case 'export-sbi': await exportSbi(); break;
+    case 'save-set': await saveSettings(a.dataset.form); break;
+    case 'claim-later': S.skipClaim = true; renderView(); break;
+    case 'user-new': S.memberEdit = { id: null, name: '', email: '', role: 'operateur', errs: {} }; S.confirm = null; renderView(); $('#um-name')?.focus(); break;
+    case 'user-edit': { const m = S.members.find(x => x.id === id); if (!m) break; S.memberEdit = { id, name: m.name, email: m.email, role: m.role, errs: {} }; S.confirm = null; renderView(); $('#um-name')?.focus(); break; }
+    case 'user-cancel': S.memberEdit = null; renderView(); break;
+    case 'user-save': await saveMember(); break;
+    case 'user-del': S.confirm = { kind: 'user-del', id }; renderView(); break;
+    case 'user-del-confirm': { const m = S.members.find(x => x.id === id); S.confirm = null; try { await Store.deleteMember(id); toast(`Fiche de ${m ? m.name : "l'utilisateur"} retirée. Retirez aussi son accès dans le menu Partager si besoin.`); } catch (err) { writeFailed(err); } renderView(); break; }
+    case 'user-claim': { const m = S.members.find(x => x.id === id); if (!m || !S.me.id) break; try { await Store.patchMember(id, { uids: [...(m.uids || []).filter(u => u !== S.me.id), S.me.id], updatedAt: new Date().toISOString() }); toast(`Votre compte est relié à la fiche de ${m.name}.`); } catch (err) { writeFailed(err); } renderView(); break; }
+    case 'toast-close': $('#toast').hidden = true; break;
+  }
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.id === 'q') { S.q = t.value; renderOpsArea(); return; }
+  const form = t.dataset && t.dataset.form; if (!form) return;
+  if (form.startsWith('set-')) { S.dirty[form] = true; return; }
+  const d = draftOf(form); if (!d) return;
+  const key = t.dataset.key;
+  if (key === 'date' || key === 'client' || key === 'note') { d[key] = t.value; if (key === 'date' && d.errs) delete d.errs.date; return; }
+  if (t.tagName === 'SELECT') return;
+  d.vals[key] = t.value;
+  const f = fieldDefs(d.type, d.vals).find(x => x.key === key);
+  const fe = t.closest('.field');
+  if (f && f.auto && !d.manual[key]) { d.manual[key] = true; t.closest('.inp').classList.remove('is-auto'); }
+  if (f && (f.auto || (d.errs && d.errs[key]))) {
+    if (d.errs) delete d.errs[key];
+    fe.classList.remove('err');
+    const old = fe.querySelector('.help, .errmsg'), html = helpHTML(form, f, d, resolve(d.type, d), null);
+    if (old) old.outerHTML = html; else if (html) fe.insertAdjacentHTML('beforeend', html);
+  }
+  refreshAutos(form);
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.dataset && t.dataset.actChange === 'step') { toggleStep(t.dataset.id, t.dataset.k, t.checked); return; }
+  const form = t.dataset && t.dataset.form; if (!form || form.startsWith('set-')) { if (form) S.dirty[form] = true; return; }
+  const dd = draftOf(form), fd = dd && t.dataset.key ? fieldDefs(dd.type, dd.vals).find(f => f.key === t.dataset.key) : null;
+  if (fd && fd.restructure) {
+    if (t.dataset.key === 'currency') { dd.vals.currency = normCur(t.value); ['rateProvider', 'rateClient'].forEach(k => { delete dd.manual[k]; delete dd.vals[k]; }); }
+    rerenderFields(form); return;
+  }
+  if (t.tagName !== 'SELECT') { if ((t.dataset.key) && fieldDefs(draftOf(form)?.type || 'nous', draftOf(form)?.vals).find(f => f.key === t.dataset.key && (f.type || 'num') === 'num')) { const d = draftOf(form), f = fieldDefs(d.type, d.vals).find(x => x.key === t.dataset.key), n = parseNum(t.value); if (isFinite(n)) t.value = fmtInput(n, f.max); } return; }
+  const d = draftOf(form); if (!d) return;
+  d.vals[t.dataset.key] = t.value; d.manual[t.dataset.key] = true;
+  rerenderFields(form);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && e.target.id && e.target.id.startsWith('um-')) { e.preventDefault(); saveMember(); return; }
+  if (e.key === 'Escape') {
+    if (S.drawer) { S.drawer = null; S.confirm = null; renderDrawer(); }
+    else if (S.memberEdit) { S.memberEdit = null; renderView(); }
+    else if (document.body.classList.contains('sb-open')) document.body.classList.remove('sb-open');
+  }
+});
+window.addEventListener('hashchange', () => setView(decodeURIComponent(location.hash.slice(1))));
+let rsT, lastW = window.innerWidth; window.addEventListener('resize', () => { if (window.innerWidth === lastW) return; lastW = window.innerWidth; clearTimeout(rsT); rsT = setTimeout(() => { if (S.view === 'tableau-de-bord' && !S.chartTable) drawChart(); }, 120); });
+
+/* ===================== démarrage ===================== */
+if (LS.get('sbCollapsed', false)) document.body.classList.add('sb-collapsed');
+S.view = VIEWS[decodeURIComponent(location.hash.slice(1))] ? decodeURIComponent(location.hash.slice(1)) : 'tableau-de-bord';
+renderChrome(); renderView();
+Store.init();
+</script>

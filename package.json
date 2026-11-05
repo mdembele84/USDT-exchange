@@ -1,0 +1,13 @@
+{
+  "name": "usdt-exchange",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Change USDT : suivi des opérations de change USDT, AED, XAF, GNF, XOF et SLE",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node tests/demo.test.js && node tests/local.test.js && node tests/live.test.js && node tests/layout.test.js"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
